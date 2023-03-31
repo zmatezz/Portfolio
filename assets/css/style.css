@@ -1,0 +1,108 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Source+Sans+Pro:wght@200;300;400&display=swap");
+/* Componentes */
+/* Header */
+header {
+  margin: 0px auto;
+  background-color: #24252a;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+}
+
+li {
+  margin: 0 10px;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Header End*/
+.logo-nav {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0px 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease 0s;
+}
+
+a:hover {
+  color: #FF0000;
+}
+
+button {
+  margin-left: 20px;
+  padding: 9px 25px;
+  background-color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: #FF0000;
+  color: white;
+}
+
+/* Elements */
+@media (min-width: 1940px) {
+  .video-background {
+    display: none;
+  }
+  body {
+    background-image: url("../img/wpp.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+/* Reset Css */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 350px 10px 350px;
+}
+
+.video-background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-47%);
+}
+
+/*# sourceMappingURL=style.css.map */

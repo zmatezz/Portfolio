@@ -1,0 +1,39 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Source+Sans+Pro:wght@200;300;400&display=swap');
+
+/* Componentes */
+
+@import "./variaveis.scss";
+@import "./header.scss";
+@import "./responsive-vbackground.scss";
+
+/* Reset Css */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 350px 10px 350px;
+}
+
+.video-background {
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-47%);
+}
