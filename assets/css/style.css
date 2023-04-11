@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poiret+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,500&family=Source+Sans+Pro:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@200;300;400;600;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -7,6 +8,111 @@
 }
 
 /*Components*/
+.terceira-tela {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, rgb(12, 15, 23) 4%, rgb(9, 11, 14) 95%, rgba(10, 0, 0, 0.96) 100%);
+  overflow-x: hidden;
+  height: 100vh;
+  font-family: "Urbanist", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  display: none;
+}
+
+.terceiro-container {
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 600px;
+  display: flex;
+  transform-style: preserve-3d;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cards {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  perspective: 2000px;
+  transform-style: preserve-3d;
+}
+
+.cards label {
+  position: absolute;
+  width: 320px;
+  height: 420px;
+  margin: auto;
+  cursor: pointer;
+  transition: transform 0.55s ease;
+}
+
+.cards .card {
+  position: relative;
+  height: 100%;
+  background-color: #070000;
+  border-radius: 5px;
+  border: 3px solid rgba(255, 0, 0, 0.35);
+  padding: 30px 35px;
+}
+
+.card .image {
+  display: flex;
+  justify-content: center;
+}
+
+.card .image img {
+  border-radius: 5px;
+  box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.5);
+  width: 200px;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card .descricao-projeto {
+  display: block;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.descricao-projeto span {
+  display: block;
+}
+
+.descricao-projeto .nome-projeto {
+  font-size: 24px;
+  color: white;
+  letter-spacing: 2px;
+  transition: all 0.6s ease;
+}
+
+.descricao-projeto .lorem {
+  font-size: 15.5px;
+  color: #ECEAED;
+}
+
+.card .btn-contact {
+  width: 100%;
+  margin: 10px auto;
+  border-radius: 5px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.7s ease;
+}
+
 #segunda-pagina {
   padding: 50px 0px 0px 0px;
   width: 100%;
