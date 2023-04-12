@@ -18,3 +18,4 @@ document.addEventListener('DOMContentLoaded', function () {
 setTimeout(function () {
   $('.ocultar').fadeIn();
 }, 3500);
+
