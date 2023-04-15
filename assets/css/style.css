@@ -19,6 +19,97 @@
   justify-content: center;
 }
 
+.container-tecnologias {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
+  width: 50%;
+  height: 100%;
+  flex-direction: row;
+}
+
+.tecnologias {
+  width: 100px;
+  height: 100px;
+  background-color: rgba(42, 42, 42, 0.152);
+  border: 1px solid rgb(255, 0, 0);
+  border-radius: 12px;
+  margin: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: ease 0.2s;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.tecnologias img {
+  display: block;
+  margin: 30px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+}
+
+.tecnologias .icones-tecnologias {
+  transition: ease-in-out 0.4s;
+}
+
+.tecnologias:hover .icones-tecnologias {
+  opacity: 0;
+}
+
+.tecnologias:hover {
+  background-color: rgb(0, 0, 0);
+  transform: scale(1.2);
+  background-size: 80px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.html:hover {
+  background-image: url(../img/html-h.png);
+}
+
+.css:hover {
+  background-image: url(../img/css-h.png);
+}
+
+.javascript:hover {
+  background-image: url(../img/js-h.png);
+  background-size: 80px;
+}
+
+.github:hover {
+  background-image: url(../img/github-h.png);
+}
+
+.vtex:hover {
+  background-image: url(../img/vtex-h.png);
+}
+
+.sass:hover {
+  background-image: url(../img/sass-h.png);
+}
+
+.react:hover {
+  background-image: url(../img/react-h.png);
+}
+
+.git:hover {
+  background-image: url(../img/git-h.png);
+}
+
 .escrita-habilidades {
   text-align: center;
   font-size: 90px;
@@ -89,59 +180,6 @@
     opacity: 0.02;
   }
 }
-.container-tecnologias {
-  text-align: center;
-  position: relative;
-  top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: auto;
-  width: 50%;
-  height: 100%;
-  flex-direction: row;
-}
-
-.tecnologias {
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(0, 0, 0);
-  border: 1px solid rgb(255, 0, 0);
-  width: 100px;
-  height: 100px;
-  border-radius: 10px;
-  margin: 5px 5px;
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.tecnologias img {
-  display: flex;
-  top: 50px;
-  width: 100px;
-  height: 100px;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-}
-
-.tecnologias .icones-tecnologias {
-  transition: ease-in-out 0.5s;
-}
-
-.tecnologias:hover .icones-tecnologias {
-  opacity: 0;
-}
-
-.tecnologias:hover {
-  background-color: rgb(255, 255, 255);
-  transform: scale(1.1);
-}
-
 #terceira-pagina {
   display: flex;
   align-items: center;
