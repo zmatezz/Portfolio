@@ -19,13 +19,15 @@
 }
 
 .container-tecnologias {
+  background-color: black;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   margin: auto;
-  width: 40%;
+  width: 30%;
   height: 100%;
   flex-direction: row;
 }
@@ -226,8 +228,15 @@
 }
 
 .div-texto {
-  display: none;
+  position: absolute;
+  left: 280px;
   background-color: red;
+  font-size: 34px;
+  transition: opacity 0.9s ease-in-out;
+}
+
+.container-tecnologias:hover + .div-texto {
+  display: block;
 }
 
 #terceira-pagina {
