@@ -1,11 +1,12 @@
 #quarta-pagina {
   padding: 50px 0px 0px 0px;
   width: 100%;
-  height: 70vh;
+  height: 0 auto;
   background: linear-gradient(90deg, rgb(7, 9, 15) 0%, rgba(0, 0, 0, 1) 50%, rgb(7, 9, 15) 100%);
-  display: flex;
+
   align-items: center;
   justify-content: center;
+
 }
 
 .container-tecnologias {
@@ -15,12 +16,13 @@
   align-items: center;
   flex-wrap: wrap;
   margin: auto;
-  width: 50%;
+  width: 40%;
   height: 100%;
   flex-direction: row;
 }
 
 .tecnologias {
+
   width: 100px;
   height: 100px;
   background-color: rgba(42, 42, 42, 0.152);
@@ -187,4 +189,60 @@
   50% {
     opacity: 0.02;
   }
+}
+
+
+.container-descricao {
+
+  font-family: 'Quando', serif;
+  font-size: 20px;
+  max-width: 40%;
+  background-color: red;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.texto-descricao {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 50px;
+  padding-bottom: 70px;
+  margin-left: 200px;
+}
+
+.texto-descricao2 {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  gap: 50px;
+  padding-bottom: 70px;
+  margin-right: 200px;
+}
+
+.quarto-container {
+  background-color: rgb(0, 255, 21);
+  height: 0 auto;
+  width: 0 auto;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 60px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+
+}
+
+.div-texto {
+  display: none;
+  background-color: red;
 }
