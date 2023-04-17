@@ -75,6 +75,7 @@
   background-size: 80px;
   background-position: center;
   background-repeat: no-repeat;
+  box-shadow: 0px 0px 15px 2px #ff0000;
 }
 
 .html:hover {
@@ -117,12 +118,14 @@
   height: 100%;
   overflow: hidden;
   color: rgb(0, 0, 0);
+  transform: translateY(-22px);
 }
 
 .letter-h {
   position: relative;
   top: calc(50% - 60px);
-  text-shadow: 0px 0px 10px red, 0px 0px 20px red, 0px 0px 40px red;
+  color: rgb(255, 60, 0);
+  text-shadow: 0px 0px 10px rgb(255, 0, 0), 0px 0px 20px rgb(255, 0, 0), 0px 0px 40px rgb(255, 0, 0);
 }
 
 .letter-h:nth-child(1) {
@@ -154,20 +157,20 @@
   animation: fade 4s infinite 1400ms;
 }
 .letter-h:nth-child(8) {
-  -webkit-animation: fade 4s infinite 1400ms;
+  -webkit-animation: fade 4s infinite 1600ms;
   animation: fade 4s infinite 1600ms;
 }
 .letter-h:nth-child(9) {
-  -webkit-animation: fade 4s infinite 1400ms;
+  -webkit-animation: fade 4s infinite 1800ms;
   animation: fade 4s infinite 1800ms;
 }
 .letter-h:nth-child(10) {
-  -webkit-animation: fade 4s infinite 1400ms;
-  animation: fade 4s infinite 1800ms;
+  -webkit-animation: fade 4s infinite 2000ms;
+  animation: fade 4s infinite 2000ms;
 }
 .letter-h:nth-child(11) {
-  -webkit-animation: fade 4s infinite 1400ms;
-  animation: fade 4s infinite 1800ms;
+  -webkit-animation: fade 4s infinite 2200ms;
+  animation: fade 4s infinite 2200ms;
 }
 
 @-webkit-keyframes fade {
@@ -226,22 +229,30 @@
 }
 
 .div-texto {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
   position: absolute;
-  left: 280px;
-  background-color: red;
+  left: 250px;
   font-size: 34px;
   transition: opacity 0.9s ease-in-out;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 10px red, 0px 0px 20px red, 0px 0px 40px red;
 }
 
-.container-tecnologias:hover + .div-texto {
+.container-tecnologias:hover + .div-texto + .div-texto2 {
   display: block;
 }
 
 .div-texto2 {
+  font-family: "Montserrat", sans-serif;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 10px rgb(0, 0, 0), 0px 0px 20px rgb(0, 0, 0), 0px 0px 40px rgb(0, 0, 0);
+  justify-content: center;
+  width: 400px;
+  height: 0 auto;
   position: absolute;
-  right: 280px;
-  background-color: red;
-  font-size: 34px;
+  right: 180px;
+  font-size: 24px;
   transition: opacity 0.9s ease-in-out;
 }
 
@@ -665,13 +676,12 @@ input {
   font-family: Poiret One;
   height: 100%;
   overflow: hidden;
-  color: red;
 }
 
 .letter {
   position: relative;
-  top: calc(50% - 60px);
-  text-shadow: 0px 0px 3px rgb(255, 255, 255);
+  color: rgb(255, 60, 0);
+  text-shadow: 0px 0px 10px rgb(255, 0, 0), 0px 0px 20px rgb(255, 0, 0), 0px 0px 40px rgb(255, 0, 0);
 }
 
 .letter:nth-child(1) {
@@ -718,7 +728,7 @@ input {
 }
 @keyframes fade {
   50% {
-    opacity: 0.02;
+    opacity: 0;
   }
 }
 /*barra*/

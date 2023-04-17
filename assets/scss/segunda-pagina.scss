@@ -208,13 +208,14 @@
   font-family: Poiret One;
   height: 100%;
   overflow: hidden;
-  color: red;
 }
 
 .letter {
   position: relative;
-  top: calc(50% - 60px);
-  text-shadow: 0px 0px 3px rgb(255, 255, 255);
+  color: rgb(255, 60, 0);
+  text-shadow: 0px 0px 10px rgb(255, 0, 0),
+    0px 0px 20px rgb(255, 0, 0),
+    0px 0px 40px rgb(255, 0, 0);
 }
 
 .letter {
@@ -272,6 +273,6 @@
 
 @keyframes fade {
   50% {
-    opacity: 0.02;
+    opacity: 0.00;
   }
 }
