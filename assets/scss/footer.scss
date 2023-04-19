@@ -1,0 +1,104 @@
+#footer {
+  height: 500px auto;
+  width: 0 auto;
+  background: radial-gradient(circle, rgba(12, 15, 23, 1) 4%, rgba(9, 11, 14, 1) 95%, rgba(10, 0, 0, 0.96) 100%);
+}
+
+.footer-container {
+  display: relative;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.feito-por {
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  margin: 0 auto;
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  position: relative;
+}
+
+.social {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rede {
+
+  position: relative;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  width: 0 auto;
+  height: 0 auto;
+
+}
+
+
+
+
+.rede img {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+}
+
+.rede:hover {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+
+  transition: all 0.3s ease-out;
+}
+
+.rede:hover img {
+  position: relative;
+  opacity: 0;
+
+
+}
+
+
+
+.linkedin-f:hover {
+
+  background: url(../img/linkedin-footer-h.png) center/contain no-repeat;
+
+  filter: drop-shadow(0 0 0.333px red) drop-shadow(0 0 0.556px red) drop-shadow(0 0 0.833px red) drop-shadow(0 0 1.111px red) drop-shadow(0 0 1.944px red) drop-shadow(0 0 2.222px red) drop-shadow(0 0 2.778px red) drop-shadow(0 0 4.167px red);
+  transition: transform 0.3s, filter 0.2s ease-in-out;
+}
+
+.whatsapp-f:hover {
+  background: url(../img/whatsapp-footer-h.png) center/contain no-repeat;
+  filter: drop-shadow(0 0 0.333px red) drop-shadow(0 0 0.556px red) drop-shadow(0 0 0.833px red) drop-shadow(0 0 1.111px red) drop-shadow(0 0 1.944px red) drop-shadow(0 0 2.222px red) drop-shadow(0 0 2.778px red) drop-shadow(0 0 4.167px red);
+  transition: transform 0.3s, filter 0.2s ease-in-out;
+
+
+}
+
+.instagram-f:hover {
+  background: url(../img/instagram-footer-h.png) center/contain no-repeat;
+  filter: drop-shadow(0 0 0.111px red) drop-shadow(0 0 0.256px red) drop-shadow(0 0 0.433px red) drop-shadow(0 0 0.611px red) drop-shadow(0 0 0.944px red) drop-shadow(0 0 1.112px red) drop-shadow(0 0 1.478px red) drop-shadow(0 0 2.167px red);
+  transition: transform 0.3s, filter 0.2s ease-in-out;
+}
+
+.github-f:hover {
+  background: url(../img/github-footer-h.png) center/contain no-repeat;
+  filter: drop-shadow(0 0 0.333px red) drop-shadow(0 0 0.556px red) drop-shadow(0 0 0.833px red) drop-shadow(0 0 1.111px red) drop-shadow(0 0 1.944px red) drop-shadow(0 0 2.222px red) drop-shadow(0 0 2.778px red) drop-shadow(0 0 4.167px red);
+  transition: transform 0.3s, filter 0.2s ease-in-out;
+}
