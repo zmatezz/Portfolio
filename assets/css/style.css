@@ -968,19 +968,16 @@ svg {
   font-weight: 100;
 }
 
-main {
-  width: 100%;
-  min-height: 100vh;
-  font-family: "Poppins", sans-serif;
-  overflow-y: hidden;
-  overflow-x: hidden;
-}
-
 /* background de video*/
 #primeira-pagina {
   width: 100%;
   height: 100vh;
   position: relative;
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 #primeira-pagina .video-background {
   min-width: 100%;
@@ -1075,6 +1072,16 @@ main {
   box-shadow: 0 0 40px 40px #fff inset, 0 0 0 0 #fff;
   -webkit-transition: all 450ms ease-in-out;
   transition: all 450ms ease-in-out;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff0000;
+  border-radius: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */

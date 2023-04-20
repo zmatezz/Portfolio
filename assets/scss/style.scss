@@ -14,3 +14,15 @@
 @import "./variaveis.scss";
 @import "./header.scss";
 @import "./main.scss";
+
+
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: rgb(0, 0, 0)
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff0000;
+  border-radius: 20px;
+}
