@@ -11,25 +11,27 @@
 
 .container-tecnologias {
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
   align-items: center;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   margin: auto;
-  width: 30%;
+  gap: 40px;
   height: 100%;
   flex-direction: row;
 }
 
 .tecnologias {
-
+  display: grid;
   width: 100px;
   height: 100px;
   background-color: rgba(42, 42, 42, 0.152);
-  border: 1px solid rgb(255, 0, 0);
+  border: 1px solid #ff0000;
   border-radius: 12px;
-  margin: 10px 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,6 +39,7 @@
   transition: ease 0.2s;
   background-position: center;
   background-repeat: no-repeat;
+
 }
 
 .tecnologias img {
@@ -114,7 +117,7 @@
   height: 100%;
   overflow: hidden;
   color: rgb(0, 0, 0);
-  transform: translateY(-22px);
+  padding: 0 0 30px 0;
 
 }
 
@@ -219,7 +222,7 @@
   justify-content: start;
   gap: 50px;
   padding-bottom: 70px;
-  margin-left: 200px;
+  margin-left: 240px;
 }
 
 .texto-descricao2 {
@@ -252,7 +255,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   position: absolute;
-  left: 250px;
+  left: 300px;
   font-size: 34px;
   transition: opacity 0.9s ease-in-out;
   color: rgb(255, 255, 255);

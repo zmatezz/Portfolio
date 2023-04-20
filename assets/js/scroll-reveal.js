@@ -1,9 +1,12 @@
 window.sr = ScrollReveal({ reset: true })
 sr.reveal(".sobre-mim", {
-  origin: "top", //Para ele surgir de cima para baixo.
-  distance: "50px", // A distancia do origin para a posição original do elemento.
-  duration: 2000, // A duração da animação em ms
-  reset: true // Ao sair do campo de tela, a animação não acontecerá novamente caso eu passe por ela novamente.
+  origin: "left", distance: "50px", duration: 2000
 });
 
 
+sr.reveal('.foto-card', { distance: "80px", duration: 2000, origin: 'right' })
+sr.reveal('.escrita-sobre', { distance: "60px", duration: 2000, origin: 'bottom' })
+sr.reveal('.escrita-projetos', { distance: "40px", duration: 2100, origin: 'top' })
+sr.reveal('.terceiro-container', { distance: "40px", duration: 2500, origin: 'bottom' })
+sr.reveal('.escrita-habilidades', { distance: "60px", duration: 2500, origin: 'right' })
+sr.reveal('.container-tecnologias', { distance: "60px", duration: 2500, origin: 'left' })
