@@ -289,6 +289,7 @@ input {
 @media (max-width:540px) {
   .cards {
     perspective: 300px;
+    transform: translateX(-10px);
   }
 
   .escrita-projetos {
