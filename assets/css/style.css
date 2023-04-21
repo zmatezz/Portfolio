@@ -11,7 +11,7 @@
 /*Components*/
 #footer {
   height: 500px auto;
-  width: 0 auto;
+  width: 100vw;
   background: radial-gradient(circle, rgb(12, 15, 23) 4%, rgb(9, 11, 14) 95%, rgba(10, 0, 0, 0.96) 100%);
 }
 
@@ -20,6 +20,7 @@
   margin: 0 auto;
   justify-content: center;
   align-items: center;
+  display: flex;
 }
 
 .feito-por {
@@ -33,7 +34,9 @@
   position: relative;
 }
 
-.social {
+.social-1,
+.social-2 {
+  flex-direction: row;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -98,6 +101,52 @@
   transition: transform 0.3s, filter 0.2s ease-in-out;
 }
 
+@media (max-width: 800px) {
+  .feito-por {
+    width: 300px;
+    text-align: center;
+  }
+  .social-1 {
+    transform: translateX(100px);
+  }
+  .social-2 {
+    transform: translateX(-100px);
+  }
+}
+@media (max-width: 650px) {
+  .feito-por {
+    width: 300px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 590px) {
+  .feito-por {
+    position: relative;
+    width: 400px;
+    font-size: 8px;
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .social-1,
+  .social-2 {
+    transform: translateX(0px);
+  }
+  .rede img {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+  }
+  .rede:hover {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+  }
+}
 #quarta-pagina {
   padding: 50px 0px 0px 0px;
   width: 100%;
@@ -755,12 +804,11 @@ input {
 }
 
 .segunda-tela {
-  padding: 50px 0px 0px 0px;
-  margin-top: 60px;
+  padding: 20px 0px 0px 0px;
 }
 
 .segundo-container {
-  padding: 50px;
+  padding: 20px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -894,6 +942,7 @@ input {
 .foto-card:hover img.foto-hover {
   opacity: 1;
   filter: blur(5px);
+  transform: rotate(1deg);
 }
 
 .foto-card .texto-card {

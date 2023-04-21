@@ -37,8 +37,8 @@ const texto2 = {
     'imagem-4': 'Plataforma para hospedagem de códigos, possibilitando gerenciamento de projetos, registros e colaborações entre a equipe.',
     'imagem-5': 'Plataforma SaaS, fornece a estrutura para funcionar uma loja e-commerce e possibilita o gerenciamento de atividades de manutenção em massa.',
     'imagem-6': 'Linguagem que potencializa o Css, é um pré-processador css que permite a escrita em uma sintaxe mais simples e depois compila esse código. ',
-    'imagem-7': 'React é uma biblioteca JavaScript que permite criar excelentes interfaces para usuários para aplicações web e móveis.',
-    'imagem-8': 'Sistema de controle de versão, bastante utilizada no desenvolvimento de software, gerenciamento do código-fonte ao longo do tempo',
+    'imagem-7': 'React é uma biblioteca JavaScript que permite criar excelentes interfaces para usuários em aplicações web e móveis.',
+    'imagem-8': 'Sistema de controle de versão, bastante utilizada no desenvolvimento de software, gerenciamento do código-fonte ao longo do tempo.',
 };
 
 imagens2.forEach(imagems => {

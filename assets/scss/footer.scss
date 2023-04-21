@@ -1,6 +1,6 @@
 #footer {
   height: 500px auto;
-  width: 0 auto;
+  width: 100vw;
   background: radial-gradient(circle, rgba(12, 15, 23, 1) 4%, rgba(9, 11, 14, 1) 95%, rgba(10, 0, 0, 0.96) 100%);
 }
 
@@ -9,6 +9,8 @@
   margin: 0 auto;
   justify-content: center;
   align-items: center;
+
+  display: flex;
 
 }
 
@@ -21,10 +23,12 @@
   margin-left: 100px;
   margin-right: 100px;
   position: relative;
+
 }
 
-.social {
-
+.social-1,
+.social-2 {
+  flex-direction: row;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,4 +105,67 @@
   background: url(../img/github-footer-h.png) center/contain no-repeat;
   filter: drop-shadow(0 0 0.333px red) drop-shadow(0 0 0.556px red) drop-shadow(0 0 0.833px red) drop-shadow(0 0 1.111px red) drop-shadow(0 0 1.944px red) drop-shadow(0 0 2.222px red) drop-shadow(0 0 2.778px red) drop-shadow(0 0 4.167px red);
   transition: transform 0.3s, filter 0.2s ease-in-out;
+}
+
+@media (max-width:800px) {
+
+  .feito-por {
+    width: 300px;
+    text-align: center;
+  }
+
+  .social-1 {
+    transform: translateX(100px);
+  }
+
+  .social-2 {
+    transform: translateX(-100px);
+  }
+
+}
+
+@media (max-width:650px) {
+
+  .feito-por {
+    width: 300px;
+    font-size: 12px;
+  }
+
+
+
+}
+
+@media (max-width:590px) {
+
+  .feito-por {
+    position: relative;
+    width: 400px;
+    font-size: 8px;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .social-1,
+  .social-2 {
+    transform: translateX(0px);
+  }
+
+
+  .rede img {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+  }
+
+  .rede:hover {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+  }
 }
