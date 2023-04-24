@@ -1367,12 +1367,11 @@ svg {
   object-fit: cover;
 }
 #primeira-pagina .video-background-mobile {
-  display: none;
   min-width: 100vw;
   min-height: 100vh;
   position: absolute;
 }
-#primeira-pagina .video-mobile video {
+#primeira-pagina .video-background-mobile video {
   width: 100%;
   height: 100%;
   width: 100vw;
@@ -1501,7 +1500,7 @@ svg {
     flex-direction: row;
     position: absolute;
     left: 50%;
-    top: 92%;
+    top: 93%;
     transform: translate(-50%, -50%);
   }
   .container-pp {
@@ -1527,20 +1526,39 @@ svg {
   }
 }
 @media (max-width: 670px) {
-  .container-pp,
-  .links-p1 {
-    display: block;
-    position: absolute;
+  .container-pp .texto.ola {
+    font-size: 30px;
+    margin-left: 110px;
+  }
+  .container-pp .texto-escrevendo {
+    font-size: 34px;
   }
   .video-background {
     background-image: url(../img/mobile.mp4);
   }
 }
-@media (max-width: 299px) {
-  html,
-  body {
-    max-width: 100%;
-    overflow-x: hidden;
+@media (max-width: 510px) {
+  .container-pp .texto.ola {
+    font-size: 30px;
+    margin-left: 130px;
+  }
+  .container-pp .texto-escrevendo {
+    font-size: 30px;
+  }
+  .video-background {
+    visibility: hidden;
+  }
+  .video-background-mobile {
+    display: block;
+  }
+}
+@media (max-width: 450px) {
+  .container-pp .texto.ola {
+    font-size: 26px;
+    margin-left: 130px;
+  }
+  .container-pp .texto-escrevendo {
+    font-size: 28px;
   }
 }
 ::-webkit-scrollbar {
