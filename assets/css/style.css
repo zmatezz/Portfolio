@@ -1305,7 +1305,7 @@ svg {
   .btn span {
     font-size: 30px;
   }
-  /* configurando menu mobile */
+  /* mobile */
   .barra {
     display: block;
     position: fixed;
@@ -1328,7 +1328,7 @@ svg {
     border-radius: 5px;
     cursor: pointer;
   }
-  /* ✕ */
+  /* fechar menu mobile */
   .close-menu:checked ~ .barra {
     top: 0;
   }
@@ -1365,6 +1365,19 @@ svg {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
+}
+#primeira-pagina .video-background-mobile {
+  display: none;
+  min-width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+}
+#primeira-pagina .video-mobile video {
+  width: 100%;
+  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: fill;
 }
 
 /*box elementos*/
@@ -1514,11 +1527,20 @@ svg {
   }
 }
 @media (max-width: 670px) {
-  .video-background {
-    display: none;
+  .container-pp,
+  .links-p1 {
+    display: block;
+    position: absolute;
   }
-  #primeira-pagina {
-    background: url(../img/mobile.wmv);
+  .video-background {
+    background-image: url(../img/mobile.mp4);
+  }
+}
+@media (max-width: 299px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
   }
 }
 ::-webkit-scrollbar {
