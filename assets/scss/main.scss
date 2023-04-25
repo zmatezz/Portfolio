@@ -7,12 +7,14 @@
   font-family: 'Poppins', sans-serif;
   overflow-y: hidden;
   overflow-x: hidden;
+  background-color: #090D11;
 }
 
 #primeira-pagina .video-background {
   min-width: 100vw;
   min-height: 100vh;
   position: absolute;
+
 }
 
 #primeira-pagina .video-background video {
@@ -21,6 +23,7 @@
   width: 100vw;
   height: 100vh;
   object-fit: cover;
+  transform: translateY(20px);
 }
 
 #primeira-pagina .video-background-mobile {
@@ -320,7 +323,7 @@
     height: 0 auto;
     margin: 0 auto;
     left: 50%;
-    top: 5%;
+    top: 10%;
     transform: translate(-50%, -50%);
     gap: 20px;
     text-align: center;
