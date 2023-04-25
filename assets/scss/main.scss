@@ -1,63 +1,52 @@
-/* background de video*/
 #primeira-pagina {
   width: 100%;
   height: 100vh;
   position: relative;
   width: 100%;
   min-height: 100vh;
-
   font-family: 'Poppins', sans-serif;
   overflow-y: hidden;
   overflow-x: hidden;
-
-  .video-background {
-    min-width: 100vw;
-    min-height: 100vh;
-    position: absolute;
-  }
-
-  .video-background video {
-    width: 100%;
-    height: 100%;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-  }
-
-  .video-background-mobile {
-    min-width: 100vw;
-    min-height: 100vh;
-    position: absolute;
-  }
-
-  .video-background-mobile video {
-    width: 100%;
-    height: 100%;
-    width: 100vw;
-    height: 100vh;
-    object-fit: fill;
-  }
 }
 
-/*box elementos*/
+#primeira-pagina .video-background {
+  min-width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+}
+
+#primeira-pagina .video-background video {
+  width: 100%;
+  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+#primeira-pagina .video-background-mobile {
+  display: none;
+}
+
+
+
 .box {
   width: 100%;
   height: 100%;
   position: relative;
   display: flex;
   align-items: center;
+}
 
-  .ocultar {
-    display: none;
-  }
+.box .ocultar {
+  display: none;
+}
 
-  .cadalado {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 60px;
-    width: 100vw;
-  }
+.box .cadalado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 60px;
+  width: 100vw;
 }
 
 .container-pp {
@@ -68,52 +57,46 @@
   color: $color-white;
   margin-left: 60px;
   width: 500px;
-
-
-
-  .texto.ola {
-    color: $color-white;
-    font-size: 30px;
-  }
-
-  .texto-escrevendo {
-    color: $color-red;
-    font-size: 40px;
-    font-weight: 600;
-  }
-
 }
 
-/*botão linkedin e github*/
+.container-pp .texto.ola {
+  color: $color-white;
+  font-size: 30px;
+}
+
+.container-pp .texto-escrevendo {
+  color: $color-red;
+  font-size: 40px;
+  font-weight: 600;
+}
+
 .links-p1 {
   position: relative;
   display: flex;
   flex-direction: column;
   margin-right: 240px;
   transform: translateY(6px);
+}
 
-  a {
-    padding: 10px 30px;
-    margin: 10px;
+.links-p1 a {
+  padding: 10px 30px;
+  margin: 10px;
+  border-radius: 22px;
+  text-decoration: none;
+}
 
-    border-radius: 22px;
-    text-decoration: none;
-  }
+.links-p1 .linkedin-p1 {
+  box-shadow: 0 0 10px 0 $color-red inset, 0 0 10px 4px $color-red;
+  color: $color-white;
+  -webkit-transition: all 550ms ease-in-out;
+  transition: all 550ms ease-in-out;
+}
 
-  .linkedin-p1 {
-    box-shadow: 0 0 10px 0 $color-red inset, 0 0 10px 4px $color-red;
-    color: $color-white;
-    -webkit-transition: all 550ms ease-in-out;
-    transition: all 550ms ease-in-out;
-
-  }
-
-  .github-p1 {
-    box-shadow: 0 0 10px 0 $color-white inset, 0 0 10px 4px $color-white;
-    color: $color-white;
-    -webkit-transition: all 550ms ease-in-out;
-    transition: all 550ms ease-in-out;
-  }
+.links-p1 .github-p1 {
+  box-shadow: 0 0 10px 0 $color-white inset, 0 0 10px 4px $color-white;
+  color: $color-white;
+  -webkit-transition: all 550ms ease-in-out;
+  transition: all 550ms ease-in-out;
 }
 
 .linkedin-p1:hover {
@@ -218,10 +201,31 @@
 
 }
 
-@media (max-width: 670px) {
+@media (max-width: 950px) {
+  .container-pp {
+    gap: 20px;
+    top: 12%;
+    flex-direction: row;
+  }
+
+  .links-p1 {
+    top: 90%;
+  }
+
+}
+
+@media (max-width: 770px) {
+
+
+  .container-pp {
+    gap: 0px;
+    top: 14%;
+    flex-direction: column;
+  }
+
   .container-pp .texto.ola {
     font-size: 30px;
-    margin-left: 110px;
+    margin-right: 50px;
   }
 
   .container-pp .texto-escrevendo {
@@ -229,42 +233,34 @@
   }
 
 
-  .video-background {
-    background-image: url(../img/mobile.mp4);
-  }
-
-
 }
 
-@media (max-width: 510px) {
-  .container-pp .texto.ola {
-    font-size: 30px;
-    margin-left: 130px;
+@media (max-width: 550px) {
+  #primeira-pagina .video-background {
+    display: none;
   }
 
-  .container-pp .texto-escrevendo {
-    font-size: 30px;
-  }
-
-  .video-background {
-    visibility: hidden;
-  }
-
-  .video-background-mobile {
+  #primeira-pagina .video-background-mobile {
     display: block;
+    min-width: 100vw;
+    min-height: 100vh;
+    position: absolute;
   }
 
-}
-
-@media (max-width: 450px) {
-  .container-pp .texto.ola {
-    font-size: 26px;
-    margin-left: 130px;
+  #primeira-pagina .video-background-mobile video {
+    width: 100%;
+    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill;
   }
 
-  .container-pp .texto-escrevendo {
-    font-size: 28px;
+  .links-p1 {
+    top: 87%;
   }
 
-
+  .container-pp {
+    top: 18%;
+    flex-direction: column;
+  }
 }
