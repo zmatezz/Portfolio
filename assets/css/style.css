@@ -1343,6 +1343,132 @@ svg {
     background: rgba(0, 0, 0, 0.527);
   }
 }
+@media (max-height: 500px) {
+  .altura-ajuste {
+    display: flex;
+    justify-content: center;
+  }
+  .organizador {
+    max-width: 300px;
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-areas: "desenho" "descricao";
+    line-height: 35px;
+  }
+  #inicio {
+    display: flex;
+    justify-content: center;
+  }
+  .desenho {
+    display: flex;
+    justify-content: center;
+  }
+  .descricao {
+    font-size: 20px;
+  }
+  .meu-nome {
+    font-size: 30px;
+  }
+  .esquerda,
+  .direita {
+    margin: 0;
+  }
+  .logo {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+  .barra {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .container-barra {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  .menu {
+    right: -15px;
+  }
+  .barra .logo {
+    width: 100%;
+  }
+  .menu-mobile ul {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .menu-mobile ul a {
+    font-size: 35px;
+  }
+  .logo-esquerda img {
+    width: 70px;
+  }
+  .center-botao {
+    width: 232px;
+    height: 84px;
+  }
+  .btn {
+    width: 232px;
+    height: 84px;
+    background-color: black;
+    border: 8px solid #fff;
+  }
+  .btn svg {
+    width: 0px;
+    height: 0px;
+  }
+  .btn span {
+    font-size: 30px;
+  }
+  /* mobile */
+  .barra {
+    display: block;
+    position: fixed;
+    top: -100vh;
+    transition: ease 0.3s;
+  }
+  .close-menu-label::after {
+    content: "☰";
+    position: fixed;
+    z-index: 2;
+    top: 1rem;
+    left: 1rem;
+    background: #ff0000;
+    color: white;
+    font-size: 2rem;
+    line-height: 3rem;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  /* fechar menu mobile */
+  .close-menu:checked ~ .barra {
+    top: 0;
+  }
+  .close-menu:checked ~ .close-menu-label::after {
+    display: block;
+    content: "✕";
+  }
+  .menu-mobile ul li a {
+    font-size: 25px;
+  }
+  .barra {
+    background: rgba(0, 0, 0, 0.527);
+  }
+}
 #primeira-pagina {
   width: 100%;
   height: 100vh;
@@ -1495,6 +1621,25 @@ svg {
 }
 @media (max-width: 1170px) {
   .links-p1 {
+    margin-right: 90px;
+  }
+  .container-pp {
+    margin-left: -110px;
+  }
+  .container-pp .texto-escrevendo {
+    font-size: 28px;
+  }
+}
+@media (max-width: 950px) {
+  .container-pp {
+    gap: 0px;
+    top: 0%;
+    flex-direction: column;
+  }
+  .links-p1 {
+    top: 90%;
+  }
+  .links-p1 {
     flex-direction: row;
     position: absolute;
     left: 50%;
@@ -1510,7 +1655,7 @@ svg {
     height: 0 auto;
     margin: 0 auto;
     left: 50%;
-    top: 85%;
+    top: 12%;
     transform: translate(-50%, -50%);
     gap: 20px;
     text-align: center;
@@ -1523,28 +1668,20 @@ svg {
     font-size: 44px;
   }
 }
-@media (max-width: 950px) {
-  .container-pp {
-    gap: 20px;
-    top: 12%;
-    flex-direction: row;
-  }
-  .links-p1 {
-    top: 90%;
-  }
-}
 @media (max-width: 770px) {
   .container-pp {
-    gap: 0px;
-    top: 14%;
-    flex-direction: column;
+    gap: 10px;
+    top: 12%;
+    margin-left: 100px;
   }
   .container-pp .texto.ola {
     font-size: 30px;
-    margin-right: 50px;
   }
   .container-pp .texto-escrevendo {
     font-size: 34px;
+  }
+  .links-p1 {
+    top: 90%;
   }
 }
 @media (max-width: 550px) {
@@ -1570,6 +1707,44 @@ svg {
   .container-pp {
     top: 18%;
     flex-direction: column;
+  }
+}
+@media (max-height: 500px) {
+  .container-pp {
+    gap: 0px;
+    top: 0%;
+    flex-direction: column;
+  }
+  .links-p1 {
+    top: 90%;
+  }
+  .links-p1 {
+    flex-direction: row;
+    position: absolute;
+    left: 50%;
+    top: 93%;
+    transform: translate(-50%, -50%);
+  }
+  .container-pp {
+    position: absolute;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    height: 0 auto;
+    margin: 0 auto;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    gap: 20px;
+    text-align: center;
+  }
+  .container-pp .texto.ola {
+    font-size: 40px;
+    margin-left: 40px;
+  }
+  .container-pp .texto-escrevendo {
+    font-size: 44px;
   }
 }
 ::-webkit-scrollbar {
