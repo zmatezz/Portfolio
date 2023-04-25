@@ -1217,41 +1217,6 @@ svg {
 }
 
 @media (max-width: 950px) {
-  .altura-ajuste {
-    display: flex;
-    justify-content: center;
-  }
-  .organizador {
-    max-width: 300px;
-    display: grid;
-    grid-template-columns: 300px;
-    grid-template-areas: "desenho" "descricao";
-    line-height: 35px;
-  }
-  #inicio {
-    display: flex;
-    justify-content: center;
-  }
-  .desenho {
-    display: flex;
-    justify-content: center;
-  }
-  .descricao {
-    font-size: 20px;
-  }
-  .meu-nome {
-    font-size: 30px;
-  }
-  .esquerda,
-  .direita {
-    margin: 0;
-  }
-  .logo {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-  }
   .barra {
     height: 100vh;
     display: flex;
@@ -1344,41 +1309,6 @@ svg {
   }
 }
 @media (max-height: 500px) {
-  .altura-ajuste {
-    display: flex;
-    justify-content: center;
-  }
-  .organizador {
-    max-width: 300px;
-    display: grid;
-    grid-template-columns: 300px;
-    grid-template-areas: "desenho" "descricao";
-    line-height: 35px;
-  }
-  #inicio {
-    display: flex;
-    justify-content: center;
-  }
-  .desenho {
-    display: flex;
-    justify-content: center;
-  }
-  .descricao {
-    font-size: 20px;
-  }
-  .meu-nome {
-    font-size: 30px;
-  }
-  .esquerda,
-  .direita {
-    margin: 0;
-  }
-  .logo {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-  }
   .barra {
     height: 100vh;
     display: flex;
