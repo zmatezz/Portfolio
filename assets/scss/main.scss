@@ -235,7 +235,7 @@
   .container-pp {
     gap: 10px;
     top: 12%;
-    margin-left: 20px;
+    margin-left: 80px;
   }
 
   .container-pp .texto.ola {
@@ -277,8 +277,17 @@
   }
 
   .container-pp {
-    top: 18%;
-    flex-direction: column;
+    gap: 10px;
+    top: 17%;
+    margin-left: 110px;
+  }
+
+  .container-pp .texto.ola {
+    font-size: 26px;
+  }
+
+  .container-pp .texto-escrevendo {
+    font-size: 30px;
   }
 }
 
@@ -311,7 +320,7 @@
     height: 0 auto;
     margin: 0 auto;
     left: 50%;
-    top: 10%;
+    top: 5%;
     transform: translate(-50%, -50%);
     gap: 20px;
     text-align: center;

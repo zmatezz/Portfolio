@@ -15,3 +15,4 @@ radios.forEach((radio, index) => {
     currentRadio = index;
   });
 });
+

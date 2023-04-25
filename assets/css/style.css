@@ -394,7 +394,6 @@
   width: 400px;
   height: 0 auto;
   right: 180px;
-  background-color: rgba(0, 128, 0, 0.261);
 }
 
 @media (max-width: 1700px) {
@@ -1084,7 +1083,7 @@ input {
 
 .container-barra {
   flex-direction: row;
-  padding: 8px;
+  padding: 4px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -1095,7 +1094,7 @@ input {
 /*Menu*/
 .menu {
   position: relative;
-  right: -50px;
+  right: -60px;
   flex-direction: row;
   /* added */
 }
@@ -1317,15 +1316,16 @@ svg {
     position: fixed;
     z-index: 2;
     top: 1rem;
-    left: 1rem;
-    background: #ff0000;
-    color: white;
+    right: 1rem;
+    background: #000000;
+    border: 2px solid red;
+    color: rgb(255, 0, 0);
     font-size: 2rem;
     line-height: 3rem;
     width: 3rem;
     height: 3rem;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
   }
   /* fechar menu mobile */
@@ -1443,9 +1443,10 @@ svg {
     position: fixed;
     z-index: 2;
     top: 1rem;
-    left: 1rem;
-    background: #ff0000;
-    color: white;
+    right: 1rem;
+    background: #000000;
+    border: 2px solid red;
+    color: rgb(255, 0, 0);
     font-size: 2rem;
     line-height: 3rem;
     width: 3rem;
@@ -1672,7 +1673,7 @@ svg {
   .container-pp {
     gap: 10px;
     top: 12%;
-    margin-left: 100px;
+    margin-left: 80px;
   }
   .container-pp .texto.ola {
     font-size: 30px;
@@ -1705,8 +1706,15 @@ svg {
     top: 87%;
   }
   .container-pp {
-    top: 18%;
-    flex-direction: column;
+    gap: 10px;
+    top: 17%;
+    margin-left: 110px;
+  }
+  .container-pp .texto.ola {
+    font-size: 26px;
+  }
+  .container-pp .texto-escrevendo {
+    font-size: 30px;
   }
 }
 @media (max-height: 500px) {
@@ -1734,7 +1742,7 @@ svg {
     height: 0 auto;
     margin: 0 auto;
     left: 50%;
-    top: 10%;
+    top: 5%;
     transform: translate(-50%, -50%);
     gap: 20px;
     text-align: center;

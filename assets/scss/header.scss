@@ -16,7 +16,7 @@
 
 .container-barra {
   flex-direction: row;
-  padding: 8px;
+  padding: 4px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -28,7 +28,7 @@
 
 .menu {
   position: relative;
-  right: -50px;
+  right: -60px;
 
   nav {
     width: 100%;
@@ -300,15 +300,16 @@ svg {
     position: fixed;
     z-index: 2;
     top: 1rem;
-    left: 1rem;
-    background: #ff0000;
-    color: white;
+    right: 1rem;
+    background: #000000;
+    border: 2px solid red;
+    color: rgb(255, 0, 0);
     font-size: 2rem;
     line-height: 3rem;
     width: 3rem;
     height: 3rem;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
   }
 
@@ -470,9 +471,10 @@ svg {
     position: fixed;
     z-index: 2;
     top: 1rem;
-    left: 1rem;
-    background: #ff0000;
-    color: white;
+    right: 1rem;
+    background: #000000;
+    border: 2px solid red;
+    color: rgb(255, 0, 0);
     font-size: 2rem;
     line-height: 3rem;
     width: 3rem;
