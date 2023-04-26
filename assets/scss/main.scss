@@ -1,5 +1,5 @@
 #primeira-pagina {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   position: relative;
   width: 100%;
@@ -8,29 +8,27 @@
   overflow-y: hidden;
   overflow-x: hidden;
   background-color: #090D11;
+
+  .video-background {
+    min-width: 100vw;
+    min-height: 100vh;
+    position: absolute;
+
+    video {
+      width: 100%;
+      height: 100%;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      transform: translateY(20px);
+    }
+  }
 }
 
-#primeira-pagina .video-background {
-  min-width: 100vw;
-  min-height: 100vh;
-  position: absolute;
-
-}
-
-#primeira-pagina .video-background video {
-  width: 100%;
-  height: 100%;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  transform: translateY(20px);
-}
-
+/*vídeo mobile*/
 #primeira-pagina .video-background-mobile {
   display: none;
 }
-
-
 
 .box {
   width: 100%;
@@ -38,18 +36,18 @@
   position: relative;
   display: flex;
   align-items: center;
-}
 
-.box .ocultar {
-  display: none;
-}
+  .ocultar {
+    display: none;
+  }
 
-.box .cadalado {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 60px;
-  width: 100vw;
+  .cadalado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+    width: 100vw;
+  }
 }
 
 .container-pp {
@@ -60,6 +58,12 @@
   color: $color-white;
   margin-left: 60px;
   width: 500px;
+
+  .texto-escrevendo {
+    color: $color-red;
+    font-size: 40px;
+    font-weight: 600;
+  }
 }
 
 .container-pp .texto.ola {
@@ -67,11 +71,7 @@
   font-size: 30px;
 }
 
-.container-pp .texto-escrevendo {
-  color: $color-red;
-  font-size: 40px;
-  font-weight: 600;
-}
+
 
 .links-p1 {
   position: relative;
@@ -294,7 +294,51 @@
   }
 }
 
+@media (max-width: 375px) {
+
+  .links-p1 {
+    top: 80%;
+  }
+
+  .container-pp {
+    gap: 10px;
+    top: 17%;
+    margin-left: 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+    width: 300px;
+    text-align: center;
+  }
+
+  .container-pp .texto.ola {
+    font-size: 26px;
+    margin-right: 50px;
+  }
+
+  .container-pp .texto-escrevendo {
+    font-size: 30px;
+  }
+}
+
+
+
+
+
+
+
 @media (max-height: 500px) {
+
+  #primeira-pagina .video-background video {
+    width: 100%;
+    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transform: translateY(0px);
+  }
+
   .container-pp {
 
     gap: 0px;
