@@ -1,4 +1,3 @@
-/*barra*/
 .barra {
   width: 100%;
   background-color: rgba(41, 1, 1, 0.048);
@@ -9,9 +8,6 @@
   top: 0;
   z-index: 1;
   font-family: 'Montserrat', sans-serif;
-
-
-  /* modified */
 }
 
 .container-barra {
@@ -22,9 +18,33 @@
   align-items: center;
   text-decoration: none;
   flex-direction: row;
-}
 
-/*Menu*/
+  .logo-esquerda {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100% transition all linear 0.7s;
+      transition-duration: 1.4s;
+      width: 40px;
+    }
+
+    .hover-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+  }
+
+  .logo-esquerda:hover img {
+    opacity: 0;
+  }
+
+  .logo-esquerda:hover img.hover-img {
+    opacity: 1;
+  }
+}
 
 .menu {
   position: relative;
@@ -56,49 +76,18 @@
   }
 
   flex-direction: row;
-  /* added */
 }
 
-
-/*Logo*/
-
-.logo-esquerda {
-  position: relative;
-  overflow: hidden;
-
-  img {
-    width: 100% transition all linear 0.7s;
-    transition-duration: 1.4s;
-    width: 40px;
-  }
-
-  .hover-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-  }
-}
-
-.logo-esquerda:hover img {
-  opacity: 0;
-}
-
-.logo-esquerda:hover img.hover-img {
-  opacity: 1;
-}
-
-/*Underline menu*/
-.btn-2 {
+.menu-btn {
   letter-spacing: 0;
 }
 
-.btn-2:hover,
-.btn-2:active {
+.menu-btn:hover,
+.menu-btn:active {
   letter-spacing: 2px;
 }
 
-.btn-2:after {
+.menu-btn:after {
   content: " ";
   width: 0%;
   height: 2px;
@@ -109,11 +98,10 @@
   transition: 0.5s ease-in-out;
 }
 
-.btn-2:hover::after {
+.menu-btn:hover::after {
   width: 100%;
 }
 
-/*Botão contato*/
 .center-botao {
   width: 126px;
   height: 42px;
@@ -131,19 +119,25 @@
   border: 1px solid $color-white;
   outline: none;
   transition: 1s ease-in-out;
-}
 
-svg {
+  svg {
 
-  border-radius: 5px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  fill: none;
-  stroke: $color-red;
-  stroke-dasharray: 150 480;
-  stroke-dashoffset: 150;
-  transition: 1s ease-in-out;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: $color-red;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+  }
+
+  span {
+    color: $color-white;
+    font-size: 18px;
+    font-weight: 100;
+  }
 }
 
 .btn:hover {
@@ -155,13 +149,6 @@ svg {
   stroke-dashoffset: -480;
 }
 
-.btn span {
-  color: $color-white;
-  font-size: 18px;
-  font-weight: 100;
-}
-
-
 @media (max-width:991px) {
 
   .barra {
@@ -170,8 +157,6 @@ svg {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-
   }
 
   .container-barra {
@@ -292,135 +277,10 @@ svg {
 
     position: absolute;
     right: 1.4rem;
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-    width: 1.8rem;
-    height: 1.8rem;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    width: 2.4rem;
+    height: 2.4rem;
     border-radius: 4px;
   }
-}
-
-
-@media (max-height:500px) {
-  .barra {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-
-  }
-
-  .container-barra {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-
-
-  }
-
-  .menu {
-    right: -15px;
-  }
-
-
-
-  .barra .logo {
-    width: 100%;
-  }
-
-  .menu-mobile ul {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .menu-mobile ul a {
-    font-size: 35px;
-  }
-
-  .logo-esquerda img {
-    width: 70px;
-  }
-
-  .center-botao {
-    width: 232px;
-    height: 84px;
-  }
-
-  .btn {
-    width: 232px;
-    height: 84px;
-    background-color: black;
-
-    border: 8px solid $color-white;
-
-    svg {
-      width: 0px;
-      height: 0px;
-    }
-
-    span {
-      font-size: 30px;
-    }
-
-
-  }
-
-
-
-
-  /* mobile */
-  .barra {
-    display: block;
-    position: fixed;
-    top: -100vh;
-    transition: ease 0.3s;
-  }
-
-  .close-menu-label::after {
-    content: '☰';
-    position: fixed;
-    z-index: 2;
-    top: 1rem;
-    right: 1rem;
-    background: #000000;
-    border: 2px solid red;
-    color: rgb(255, 0, 0);
-    font-size: 2rem;
-    line-height: 3rem;
-    width: 3rem;
-    height: 3rem;
-    text-align: center;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  /* fechar menu mobile */
-  .close-menu:checked~.barra {
-    top: 0;
-  }
-
-  .close-menu:checked~.close-menu-label::after {
-    display: block;
-    content: '✕';
-  }
-
-  .menu-mobile ul li a {
-    font-size: 25px;
-  }
-
-  .barra {
-    background: rgba(0, 0, 0, 0.527);
-  }
-
 }
