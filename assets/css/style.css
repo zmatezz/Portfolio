@@ -1298,7 +1298,7 @@ input {
 }
 @media (max-width: 620px) {
   .close-menu-label::after {
-    position: absolute;
+    position: fixed;
     right: 1.4rem;
     font-size: 1.8rem;
     line-height: 2.4rem;
