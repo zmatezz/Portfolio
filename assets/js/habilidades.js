@@ -54,3 +54,73 @@ imagens2.forEach(imagems => {
         divTexto2.style.opacity = '0';
     });
 });
+
+if (window.innerWidth <= 750) {
+    imagens.forEach(imagem => {
+        const id = imagem.id;
+        const textoImagem = texto[id];
+
+        imagem.removeEventListener('mouseover', () => {
+            divTexto.innerHTML = textoImagem;
+            divTexto.style.opacity = '1';
+        });
+
+        imagem.addEventListener('click', () => {
+            divTexto.innerHTML = textoImagem;
+            divTexto.style.opacity = '1';
+        });
+    });
+
+    imagens2.forEach(imagem => {
+        const id = imagem.id;
+        const textoImagem2 = texto2[id];
+
+        imagem.removeEventListener('mouseover', () => {
+            divTexto2.innerHTML = textoImagem2;
+            divTexto2.style.opacity = '1';
+        });
+
+        imagem.addEventListener('click', () => {
+            divTexto2.innerHTML = textoImagem2;
+            divTexto2.style.opacity = '1';
+        });
+    });
+} else {
+    imagens.forEach(imagem => {
+        const id = imagem.id;
+        const textoImagem = texto[id];
+
+        imagem.removeEventListener('click', () => {
+            divTexto.innerHTML = textoImagem;
+            divTexto.style.opacity = '1';
+        });
+
+        imagem.addEventListener('mouseover', () => {
+            divTexto.innerHTML = textoImagem;
+            divTexto.style.opacity = '1';
+        });
+
+        imagem.addEventListener('mouseout', () => {
+            divTexto.style.opacity = '0';
+        });
+    });
+
+    imagens2.forEach(imagem => {
+        const id = imagem.id;
+        const textoImagem2 = texto2[id];
+
+        imagem.removeEventListener('click', () => {
+            divTexto2.innerHTML = textoImagem2;
+            divTexto2.style.opacity = '1';
+        });
+
+        imagem.addEventListener('mouseover', () => {
+            divTexto2.innerHTML = textoImagem2;
+            divTexto2.style.opacity = '1';
+        });
+
+        imagem.addEventListener('mouseout', () => {
+            divTexto2.style.opacity = '0';
+        });
+    });
+}

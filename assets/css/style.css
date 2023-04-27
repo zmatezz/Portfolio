@@ -324,43 +324,13 @@
     opacity: 0.02;
   }
 }
-.container-descricao {
-  font-family: "Quando", serif;
-  font-size: 20px;
-  max-width: 40%;
-  background-color: red;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.texto-descricao {
-  color: white;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-  gap: 50px;
-  padding-bottom: 70px;
-  margin-left: 240px;
-}
-
-.texto-descricao2 {
-  color: white;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-  gap: 50px;
-  padding-bottom: 70px;
-  margin-right: 200px;
-}
-
 .quarto-container {
   height: 0 auto;
   width: 0 auto;
   align-items: center;
   justify-content: center;
   align-items: center;
+  padding-top: 80px;
   padding-bottom: 60px;
   text-align: center;
   margin: 0 auto;
@@ -509,6 +479,10 @@
   }
 }
 @media (max-width: 750px) {
+  .quarto-container {
+    display: flex;
+    flex-direction: column;
+  }
   .div-texto {
     position: relative;
     left: 0px;
