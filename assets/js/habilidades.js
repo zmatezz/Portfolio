@@ -16,14 +16,20 @@ imagens.forEach(imagem => {
     const id = imagem.id;
     const textoImagem = texto[id];
 
-    imagem.addEventListener('mouseover', () => {
-        divTexto.innerHTML = textoImagem;
-        divTexto.style.opacity = '1';
-    });
+    const eventoMouseOver = (evento) => {
+        if (evento.type === 'mouseover' || evento.type === 'touchstart' || evento.type === 'click') {
+            divTexto.innerHTML = textoImagem;
+            divTexto.style.opacity = '1';
+        }
+        if (evento.type === 'mouseout') {
+            divTexto.style.opacity = '0';
+        }
+    };
 
-    imagem.addEventListener('mouseout', () => {
-        divTexto.style.opacity = '0';
-    });
+    imagem.addEventListener('mouseover', eventoMouseOver);
+    imagem.addEventListener('touchstart', eventoMouseOver);
+    imagem.addEventListener('click', eventoMouseOver);
+    imagem.addEventListener('mouseout', eventoMouseOver);
 });
 
 
@@ -45,82 +51,18 @@ imagens2.forEach(imagems => {
     const id = imagems.id;
     const textoImagem2 = texto2[id];
 
-    imagems.addEventListener('mouseover', () => {
-        divTexto2.innerHTML = textoImagem2;
-        divTexto2.style.opacity = '1';
-    });
-
-    imagems.addEventListener('mouseout', () => {
-        divTexto2.style.opacity = '0';
-    });
-});
-
-if (window.innerWidth <= 750) {
-    imagens.forEach(imagem => {
-        const id = imagem.id;
-        const textoImagem = texto[id];
-
-        imagem.removeEventListener('mouseover', () => {
-            divTexto.innerHTML = textoImagem;
-            divTexto.style.opacity = '1';
-        });
-
-        imagem.addEventListener('click', () => {
-            divTexto.innerHTML = textoImagem;
-            divTexto.style.opacity = '1';
-        });
-    });
-
-    imagens2.forEach(imagem => {
-        const id = imagem.id;
-        const textoImagem2 = texto2[id];
-
-        imagem.removeEventListener('mouseover', () => {
+    const eventoMouseOver = (evento) => {
+        if (evento.type === 'mouseover' || evento.type === 'touchstart' || evento.type === 'click') {
             divTexto2.innerHTML = textoImagem2;
             divTexto2.style.opacity = '1';
-        });
-
-        imagem.addEventListener('click', () => {
-            divTexto2.innerHTML = textoImagem2;
-            divTexto2.style.opacity = '1';
-        });
-    });
-} else {
-    imagens.forEach(imagem => {
-        const id = imagem.id;
-        const textoImagem = texto[id];
-
-        imagem.removeEventListener('click', () => {
-            divTexto.innerHTML = textoImagem;
-            divTexto.style.opacity = '1';
-        });
-
-        imagem.addEventListener('mouseover', () => {
-            divTexto.innerHTML = textoImagem;
-            divTexto.style.opacity = '1';
-        });
-
-        imagem.addEventListener('mouseout', () => {
-            divTexto.style.opacity = '0';
-        });
-    });
-
-    imagens2.forEach(imagem => {
-        const id = imagem.id;
-        const textoImagem2 = texto2[id];
-
-        imagem.removeEventListener('click', () => {
-            divTexto2.innerHTML = textoImagem2;
-            divTexto2.style.opacity = '1';
-        });
-
-        imagem.addEventListener('mouseover', () => {
-            divTexto2.innerHTML = textoImagem2;
-            divTexto2.style.opacity = '1';
-        });
-
-        imagem.addEventListener('mouseout', () => {
+        }
+        if (evento.type === 'mouseout') {
             divTexto2.style.opacity = '0';
-        });
-    });
-}
+        }
+    };
+
+    imagems.addEventListener('mouseover', eventoMouseOver);
+    imagems.addEventListener('touchstart', eventoMouseOver);
+    imagems.addEventListener('click', eventoMouseOver);
+    imagems.addEventListener('mouseout', eventoMouseOver);
+});
