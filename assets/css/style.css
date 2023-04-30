@@ -450,6 +450,8 @@
   .tecnologias {
     width: 100px;
     height: 100px;
+    cursor: pointer;
+    touch-action: manipulation;
   }
   .tecnologias img {
     width: 60px;
@@ -480,12 +482,17 @@
 }
 @media (max-width: 750px) {
   .quarto-container {
+    position: relative;
     display: flex;
+    align-items: center;
     flex-direction: column;
+    justify-content: center;
   }
   .div-texto {
-    position: relative;
-    left: 0px;
+    position: absolute;
+    left: 70px;
+    top: -14px;
+    margin: 0 auto;
   }
   .div-texto2 {
     position: relative;
