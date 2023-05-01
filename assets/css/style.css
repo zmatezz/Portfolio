@@ -157,65 +157,48 @@
 
 .escrita-habilidades {
   text-align: center;
-  font-size: 90px;
+  font-size: 4vw;
   font-family: Poiret One;
-  height: 100%;
-  overflow: hidden;
-  color: rgb(0, 0, 0);
   padding: 50px 0 30px 0;
 }
-
-.letter-h {
+.escrita-habilidades .letter-h {
   position: relative;
-  top: calc(50% - 60px);
   color: rgb(255, 60, 0);
   text-shadow: 0px 0px 10px rgb(255, 0, 0), 0px 0px 20px rgb(255, 0, 0), 0px 0px 40px rgb(255, 0, 0);
 }
-
-.letter-h:nth-child(1) {
+.escrita-habilidades .letter-h:nth-child(1) {
   animation: fade 4s infinite 200ms;
 }
-
-.letter-h:nth-child(2) {
+.escrita-habilidades .letter-h:nth-child(2) {
   animation: fade 4s infinite 400ms;
 }
-
-.letter-h:nth-child(3) {
+.escrita-habilidades .letter-h:nth-child(3) {
   animation: fade 4s infinite 600ms;
 }
-
-.letter-h:nth-child(4) {
+.escrita-habilidades .letter-h:nth-child(4) {
   animation: fade 4s infinite 800ms;
 }
-
-.letter-h:nth-child(5) {
+.escrita-habilidades .letter-h:nth-child(5) {
   animation: fade 4s infinite 1000ms;
 }
-
-.letter-h:nth-child(6) {
+.escrita-habilidades .letter-h:nth-child(6) {
   animation: fade 4s infinite 1200ms;
 }
-
-.letter-h:nth-child(7) {
+.escrita-habilidades .letter-h:nth-child(7) {
   animation: fade 4s infinite 1400ms;
 }
-
-.letter-h:nth-child(8) {
+.escrita-habilidades .letter-h:nth-child(8) {
   animation: fade 4s infinite 1600ms;
 }
-
-.letter-h:nth-child(9) {
+.escrita-habilidades .letter-h:nth-child(9) {
   animation: fade 4s infinite 1800ms;
 }
-
-.letter-h:nth-child(10) {
+.escrita-habilidades .letter-h:nth-child(10) {
   animation: fade 4s infinite 2000ms;
 }
-
-.letter-h:nth-child(11) {
+.escrita-habilidades .letter-h:nth-child(11) {
   animation: fade 4s infinite 2200ms;
 }
-
 @-webkit-keyframes fade {
   50% {
     opacity: 0.02;
@@ -226,43 +209,33 @@
     opacity: 0.02;
   }
 }
-.container-tecnologias {
-  position: relative;
+
+.quarto-container {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0px;
+  display: flex;
+}
+.quarto-container .container-tecnologias {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  align-items: center;
   gap: 40px;
 }
-
-.tecnologias {
+.quarto-container .container-tecnologias .tecnologias {
   width: 100px;
   height: 100px;
-  background-color: rgba(42, 42, 42, 0.152);
   border: 1px solid #ff0000;
   border-radius: 12px;
   display: flex;
-  transition: ease 0.2s;
+  transition: ease 0.3s;
   background-position: center;
-  background-repeat: no-repeat;
 }
-
-.tecnologias img {
-  display: block;
-  margin: 30px;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+.quarto-container .container-tecnologias .tecnologias img {
   margin: auto;
-  justify-content: center;
-  align-items: center;
   width: 80px;
   height: 80px;
-}
-
-.tecnologias .icones-tecnologias {
-  transition: ease-in-out 0.4s;
 }
 
 .tecnologias:hover .icones-tecnologias {
@@ -309,21 +282,6 @@
 
 .git:hover {
   background-image: url(../img/git-h.png);
-}
-
-.quarto-container {
-  height: 0 auto;
-  width: 0 auto;
-  align-items: center;
-  justify-content: center;
-  align-items: center;
-  padding-top: 80px;
-  padding-bottom: 60px;
-  text-align: center;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 }
 
 .div-texto {

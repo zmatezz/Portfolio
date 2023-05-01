@@ -8,85 +8,71 @@
 
 .escrita-habilidades {
   text-align: center;
-  font-size: 90px;
+  font-size: 4vw;
   font-family: Poiret One;
-  height: 100%;
-  overflow: hidden;
-  color: rgb(0, 0, 0);
   padding: 50px 0 30px 0;
 
-}
+  .letter-h {
+    position: relative;
+    color: rgb(255, 60, 0);
+    text-shadow: 0px 0px 10px rgb(255, 0, 0),
+      0px 0px 20px rgb(255, 0, 0),
+      0px 0px 40px rgb(255, 0, 0);
+  }
 
-.letter-h {
-  position: relative;
-  top: calc(50% - 60px);
-  color: rgb(255, 60, 0);
-  text-shadow: 0px 0px 10px rgb(255, 0, 0),
-    0px 0px 20px rgb(255, 0, 0),
-    0px 0px 40px rgb(255, 0, 0);
+  $total-letras: 11;
 
-}
+  @for $cadaletra from 1 through $total-letras {
+    .letter-h:nth-child(#{$cadaletra}) {
+      animation: fade 4s infinite ($cadaletra * 200ms);
+    }
+  }
 
+  @-webkit-keyframes fade {
+    50% {
+      opacity: 0.02;
+    }
+  }
 
-$total-letras: 11;
-
-@for $cadaletra from 1 through $total-letras {
-  .letter-h:nth-child(#{$cadaletra}) {
-    animation: fade 4s infinite ($cadaletra * 200ms);
+  @keyframes fade {
+    50% {
+      opacity: 0.02;
+    }
   }
 }
 
-
-@-webkit-keyframes fade {
-  50% {
-    opacity: 0.02;
-  }
-}
-
-@keyframes fade {
-  50% {
-    opacity: 0.02;
-  }
-}
-
-.container-tecnologias {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+.quarto-container {
+  width: 100%;
   align-items: center;
-  gap: 40px;
-}
-
-.tecnologias {
-  width: 100px;
-  height: 100px;
-  background-color: rgba(42, 42, 42, 0.152);
-  border: 1px solid #ff0000;
-  border-radius: 12px;
-  display: flex;
-  transition: ease 0.2s;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.tecnologias img {
-  display: block;
-  margin: 30px;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
   justify-content: center;
-  align-items: center;
-  width: 80px;
-  height: 80px;
+  padding: 50px 0px;
+  display: flex;
+
+  .container-tecnologias {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+
+    .tecnologias {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #ff0000;
+      border-radius: 12px;
+      display: flex;
+      transition: ease 0.3s;
+      background-position: center;
+
+      img {
+        margin: auto;
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
 }
 
-.tecnologias .icones-tecnologias {
-  transition: ease-in-out 0.4s;
-}
+
 
 .tecnologias:hover .icones-tecnologias {
   opacity: 0;
@@ -142,22 +128,7 @@ $total-letras: 11;
 
 
 
-.quarto-container {
-  height: 0 auto;
-  width: 0 auto;
-  align-items: center;
-  justify-content: center;
-  align-items: center;
-  padding-top: 80px;
-  padding-bottom: 60px;
-  text-align: center;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 
-
-}
 
 .div-texto {
   font-family: 'Montserrat', sans-serif;
