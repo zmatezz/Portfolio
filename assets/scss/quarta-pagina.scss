@@ -72,8 +72,6 @@
   }
 }
 
-
-
 .tecnologias:hover .icones-tecnologias {
   opacity: 0;
 }
@@ -124,19 +122,13 @@
   background-image: url(../img/git-h.png);
 }
 
-
-
-
-
-
-
 .div-texto {
+  position: absolute;
   font-family: 'Montserrat', sans-serif;
-
   font-size: 34px;
   font-weight: 700;
-  position: absolute;
   left: 300px;
+  text-align: center;
   transition: opacity 0.9s ease-in-out;
   color: rgb(255, 255, 255);
   text-shadow: 0px 0px 10px red,
@@ -149,17 +141,13 @@
 }
 
 .div-texto2 {
+  position: absolute;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-
   font-size: 24px;
-  position: absolute;
+  text-align: center;
   transition: opacity 0.9s ease-in-out;
   color: white;
-
-  width: 400px;
-  height: 0 auto;
-  right: 180px;
 }
 
 @media (max-width:1700px) {
