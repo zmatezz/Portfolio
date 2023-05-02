@@ -1,79 +1,64 @@
 #quarta-pagina {
-  width: 100vw;
+  padding: 50px 0px 0px 0px;
+  width: 100%;
   height: 0 auto;
   background: linear-gradient(90deg, rgb(7, 9, 15) 0%, rgba(0, 0, 0, 1) 50%, rgb(7, 9, 15) 100%);
+
   align-items: center;
   justify-content: center;
-}
 
-.escrita-habilidades {
-  text-align: center;
-  font-size: 4vw;
-  font-family: Poiret One;
-  padding: 50px 0 30px 0;
-
-  .letter-h {
-    position: relative;
-    color: rgb(255, 60, 0);
-    text-shadow: 0px 0px 10px rgb(255, 0, 0),
-      0px 0px 20px rgb(255, 0, 0),
-      0px 0px 40px rgb(255, 0, 0);
-  }
-
-  $total-letras: 11;
-
-  @for $cadaletra from 1 through $total-letras {
-    .letter-h:nth-child(#{$cadaletra}) {
-      animation: fade 4s infinite ($cadaletra * 200ms);
-    }
-  }
-
-  @-webkit-keyframes fade {
-    50% {
-      opacity: 0.02;
-    }
-  }
-
-  @keyframes fade {
-    50% {
-      opacity: 0.02;
-    }
-  }
-}
-
-.quarto-container {
-  align-items: center;
-  justify-content: center;
-  padding: 50px 0px;
-  display: flex;
-  margin: 0 auto;
-  text-align: center;
 }
 
 .container-tecnologias {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: auto;
   gap: 40px;
+  height: 100%;
+  flex-direction: row;
 }
 
 .tecnologias {
+  display: grid;
   width: 100px;
   height: 100px;
+  background-color: rgba(42, 42, 42, 0.152);
   border: 1px solid #ff0000;
   border-radius: 12px;
   display: flex;
-  transition: ease 0.3s;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: ease 0.2s;
   background-position: center;
+  background-repeat: no-repeat;
 
 }
 
 .tecnologias img {
+  display: block;
+  margin: 30px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   margin: auto;
+  justify-content: center;
+  align-items: center;
   width: 80px;
   height: 80px;
 }
 
+.tecnologias .icones-tecnologias {
+  transition: ease-in-out 0.4s;
+}
 
 .tecnologias:hover .icones-tecnologias {
   opacity: 0;
@@ -125,9 +110,115 @@
   background-image: url(../img/git-h.png);
 }
 
+.escrita-habilidades {
+  text-align: center;
+  font-size: 90px;
+  font-family: Poiret One;
+  height: 100%;
+  overflow: hidden;
+  color: rgb(0, 0, 0);
+  padding: 0 0 30px 0;
+
+}
+
+.letter-h {
+  position: relative;
+  top: calc(50% - 60px);
+  color: rgb(255, 60, 0);
+  text-shadow: 0px 0px 10px rgb(255, 0, 0),
+    0px 0px 20px rgb(255, 0, 0),
+    0px 0px 40px rgb(255, 0, 0);
+
+}
+
+
+.letter-h {
+  &:nth-child(1) {
+    -webkit-animation: fade 4s infinite 200ms;
+    animation: fade 4s infinite 200ms;
+  }
+
+  &:nth-child(2) {
+    -webkit-animation: fade 4s infinite 400ms;
+    animation: fade 4s infinite 400ms;
+  }
+
+  &:nth-child(3) {
+    -webkit-animation: fade 4s infinite 600ms;
+    animation: fade 4s infinite 600ms;
+  }
+
+  &:nth-child(4) {
+    -webkit-animation: fade 4s infinite 800ms;
+    animation: fade 4s infinite 800ms;
+  }
+
+  &:nth-child(5) {
+    -webkit-animation: fade 4s infinite 1000ms;
+    animation: fade 4s infinite 1000ms;
+  }
+
+  &:nth-child(6) {
+    -webkit-animation: fade 4s infinite 1200ms;
+    animation: fade 4s infinite 1200ms;
+  }
+
+  &:nth-child(7) {
+    -webkit-animation: fade 4s infinite 1400ms;
+    animation: fade 4s infinite 1400ms;
+  }
+
+  &:nth-child(8) {
+    -webkit-animation: fade 4s infinite 1600ms;
+    animation: fade 4s infinite 1600ms;
+  }
+
+  &:nth-child(9) {
+    -webkit-animation: fade 4s infinite 1800ms;
+    animation: fade 4s infinite 1800ms;
+  }
+
+  &:nth-child(10) {
+    -webkit-animation: fade 4s infinite 2000ms;
+    animation: fade 4s infinite 2000ms;
+  }
+
+  &:nth-child(11) {
+    -webkit-animation: fade 4s infinite 2200ms;
+    animation: fade 4s infinite 2200ms;
+  }
+}
+
+@-webkit-keyframes fade {
+  50% {
+    opacity: 0.02;
+  }
+}
+
+@keyframes fade {
+  50% {
+    opacity: 0.02;
+  }
+}
 
 
 
+.quarto-container {
+  height: 0 auto;
+  width: 0 auto;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+
+}
 
 .div-texto {
   font-family: 'Montserrat', sans-serif;
@@ -330,8 +421,6 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    padding-top: 80px;
-    padding-bottom: 60px;
   }
 
   .div-texto {
@@ -339,7 +428,6 @@
     left: 70px;
     top: -14px;
     margin: 0 auto;
-    width: 210px;
   }
 
   .div-texto2 {

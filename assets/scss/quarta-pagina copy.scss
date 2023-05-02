@@ -42,38 +42,36 @@
 }
 
 .quarto-container {
+  width: 100%;
   align-items: center;
   justify-content: center;
   padding: 50px 0px;
   display: flex;
   margin: 0 auto;
-  text-align: center;
+
+  .container-tecnologias {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+
+    .tecnologias {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #ff0000;
+      border-radius: 12px;
+      display: flex;
+      transition: ease 0.3s;
+      background-position: center;
+
+      img {
+        margin: auto;
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
 }
-
-.container-tecnologias {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 40px;
-}
-
-.tecnologias {
-  width: 100px;
-  height: 100px;
-  border: 1px solid #ff0000;
-  border-radius: 12px;
-  display: flex;
-  transition: ease 0.3s;
-  background-position: center;
-
-}
-
-.tecnologias img {
-  margin: auto;
-  width: 80px;
-  height: 80px;
-}
-
 
 .tecnologias:hover .icones-tecnologias {
   opacity: 0;
@@ -125,17 +123,14 @@
   background-image: url(../img/git-h.png);
 }
 
-
-
-
-
 .div-texto {
+  position: absolute;
   font-family: 'Montserrat', sans-serif;
-
   font-size: 34px;
   font-weight: 700;
-  position: absolute;
   left: 300px;
+  width: 210px;
+  text-align: center;
   transition: opacity 0.9s ease-in-out;
   color: rgb(255, 255, 255);
   text-shadow: 0px 0px 10px red,
@@ -148,21 +143,18 @@
 }
 
 .div-texto2 {
+  position: absolute;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-
   font-size: 24px;
-  position: absolute;
+  text-align: center;
   transition: opacity 0.9s ease-in-out;
   color: white;
-
   width: 400px;
-  height: 0 auto;
   right: 180px;
 }
 
 @media (max-width:1700px) {
-
   .div-texto {
     left: 180px;
   }
@@ -170,37 +162,17 @@
   .div-texto2 {
     right: 90px;
   }
-
 }
 
-@media (max-width:1600px) {
-  .div-texto {
-    left: 130px;
-  }
 
+
+@media (max-width:1550px) {
   .div-texto2 {
-    right: 100px;
-
-    width: 340px;
-  }
-
-
-
-}
-
-@media (max-width:1500px) {
-
-
-  .div-texto2 {
-    right: 80px;
+    right: 110px;
     width: 300px;
     font-weight: 700;
-
     font-size: 22px;
   }
-
-
-
 }
 
 
@@ -211,14 +183,12 @@
 
   .div-texto2 {
     right: 90px;
-
     width: 270px;
   }
 }
 
 
 @media (max-width:1280px) {
-
   .div-texto {
     font-size: 28px;
     font-weight: 700;
@@ -253,17 +223,11 @@
     background-size: 60px;
   }
 
-  .escrita-habilidades {
-    font-size: 70px;
-
-  }
-
   .quarto-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 37px;
-    max-width: 300px;
   }
 }
 
@@ -330,8 +294,6 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    padding-top: 80px;
-    padding-bottom: 60px;
   }
 
   .div-texto {
@@ -339,7 +301,6 @@
     left: 70px;
     top: -14px;
     margin: 0 auto;
-    width: 210px;
   }
 
   .div-texto2 {
