@@ -41,6 +41,7 @@
   }
 }
 
+/*validar no media query, pq tá dando b.o quando reduz o codigo sass*/
 .quarto-container {
   align-items: center;
   justify-content: center;
@@ -74,6 +75,9 @@
   height: 80px;
 }
 
+/*validar todos até aqui*/
+
+
 
 .tecnologias:hover .icones-tecnologias {
   opacity: 0;
@@ -90,17 +94,14 @@
 
 .html:hover {
   background-image: url(../img/html-h.png);
-
 }
 
 .css:hover {
   background-image: url(../img/css-h.png);
-
 }
 
 .javascript:hover {
   background-image: url(../img/js-h.png);
-  background-size: 80px;
 }
 
 .github:hover {
@@ -109,8 +110,6 @@
 
 .vtex:hover {
   background-image: url(../img/vtex-h.png);
-  ;
-
 }
 
 .sass:hover {
@@ -125,17 +124,14 @@
   background-image: url(../img/git-h.png);
 }
 
-
-
-
-
 .div-texto {
+  position: absolute;
   font-family: 'Montserrat', sans-serif;
-
   font-size: 34px;
   font-weight: 700;
-  position: absolute;
   left: 300px;
+  width: 210px;
+  text-align: center;
   transition: opacity 0.9s ease-in-out;
   color: rgb(255, 255, 255);
   text-shadow: 0px 0px 10px red,
@@ -148,18 +144,18 @@
 }
 
 .div-texto2 {
+  position: absolute;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-
   font-size: 24px;
-  position: absolute;
+  text-align: center;
   transition: opacity 0.9s ease-in-out;
   color: white;
-
   width: 400px;
-  height: 0 auto;
   right: 180px;
 }
+
+/*validei até aqui*/
 
 @media (max-width:1700px) {
 
