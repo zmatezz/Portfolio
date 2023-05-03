@@ -8,9 +8,9 @@
 
 .escrita-habilidades {
   text-align: center;
-  font-size: 4vw;
+  font-size: 6vw;
   font-family: Poiret One;
-  padding: 50px 0 30px 0;
+  padding: 50px 0 0 0;
 
   .letter-h {
     position: relative;
@@ -41,7 +41,6 @@
   }
 }
 
-/*validar no media query, pq tá dando b.o quando reduz o codigo sass*/
 .quarto-container {
   align-items: center;
   justify-content: center;
@@ -66,7 +65,6 @@
   display: flex;
   transition: ease 0.3s;
   background-position: center;
-
 }
 
 .tecnologias img {
@@ -74,10 +72,6 @@
   width: 80px;
   height: 80px;
 }
-
-/*validar todos até aqui*/
-
-
 
 .tecnologias:hover .icones-tecnologias {
   opacity: 0;
@@ -155,8 +149,6 @@
   right: 180px;
 }
 
-/*validei até aqui*/
-
 @media (max-width:1700px) {
 
   .div-texto {
@@ -166,7 +158,6 @@
   .div-texto2 {
     right: 90px;
   }
-
 }
 
 @media (max-width:1600px) {
@@ -176,29 +167,17 @@
 
   .div-texto2 {
     right: 100px;
-
     width: 340px;
   }
-
-
-
 }
 
 @media (max-width:1500px) {
-
-
   .div-texto2 {
-    right: 80px;
     width: 300px;
     font-weight: 700;
-
     font-size: 22px;
   }
-
-
-
 }
-
 
 @media (max-width:1350px) {
   .div-texto {
@@ -207,27 +186,23 @@
 
   .div-texto2 {
     right: 90px;
-
     width: 270px;
   }
 }
-
 
 @media (max-width:1280px) {
 
   .div-texto {
     font-size: 28px;
     font-weight: 700;
-    left: 110px;
+    left: 120px;
   }
 
   .div-texto2 {
-    right: 100px;
-
+    right: 95px;
     width: 250px;
-    font-weight: 700;
-
     font-size: 20px;
+    font-weight: 700;
   }
 
   .container-tecnologias {
@@ -235,7 +210,6 @@
   }
 
   .tecnologias {
-    display: grid;
     width: 90px;
     height: 90px;
   }
@@ -248,75 +222,42 @@
   .tecnologias:hover {
     background-size: 60px;
   }
-
-  .escrita-habilidades {
-    font-size: 70px;
-
-  }
-
-  .quarto-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 37px;
-    max-width: 300px;
-  }
 }
 
-@media (max-width:1100px) {
-  #quarta-pagina {
-    height: 0 auto;
-  }
-
+@media (max-width:1120px) {
   .container-tecnologias {
-    gap: 20px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
   }
 
   .tecnologias {
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
     touch-action: manipulation;
   }
 
-  .tecnologias img {
-    width: 60px;
-    height: 60px;
+  .div-texto2 {
+    font-size: 22px;
   }
+}
 
-  .tecnologias:hover {
-    background-size: 60px;
-  }
-
+@media (max-width:950px) {
   .div-texto {
-
     left: 70px;
   }
 
   .div-texto2 {
-    right: 40px;
-
-    width: 250px;
-    font-weight: 700;
-
-    font-size: 22px;
+    width: 190px;
+    font-size: 20px;
   }
 }
 
 @media (max-width:800px) {
   .div-texto {
-    left: 40px;
+    left: 50px;
   }
 
   .div-texto2 {
-    right: 55px;
-    width: 190px;
-
-    font-size: 20px;
+    right: 50px;
   }
-
 }
 
 @media (max-width:750px) {
@@ -330,40 +271,22 @@
     padding-bottom: 60px;
   }
 
+  .escrita-habilidades {
+    padding: 20px;
+    font-size: 8vw;
+  }
+
   .div-texto {
-    position: absolute;
-    left: 70px;
-    top: -14px;
-    margin: 0 auto;
-    width: 210px;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .div-texto2 {
     position: relative;
     right: 0;
-    width: 350px;
-
+    width: 240px;
+    margin-top: 20px;
     font-size: 24px;
   }
-
-  .escrita-habilidades {
-    font-size: 56px;
-  }
-
-}
-
-@media (max-width:550px) {
-
-  .escrita-habilidades {
-    font-size: 44px;
-  }
-
-}
-
-@media (max-width:400px) {
-
-  .escrita-habilidades {
-    font-size: 34px;
-  }
-
 }
