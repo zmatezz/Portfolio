@@ -358,9 +358,6 @@
     width: 90px;
     height: 90px;
   }
-  .tecnologias:hover {
-    background-size: 60px;
-  }
 }
 @media (max-width: 1120px) {
   .quarto-container .container-tecnologias {
@@ -415,6 +412,11 @@
     width: 240px;
     margin-top: 20px;
     font-size: 24px;
+  }
+}
+@media (max-width: 400px) {
+  .escrita-habilidades {
+    font-size: 9vw;
   }
 }
 #terceira-pagina {
@@ -1193,7 +1195,7 @@ input {
 }
 @media (max-width: 400px) {
   .close-menu-label::after {
-    right: 2.8rem;
+    right: 1.8rem;
     font-size: 1.4rem;
     line-height: 2rem;
     width: 2rem;

@@ -208,10 +208,6 @@
     width: 90px;
     height: 90px;
   }
-
-  .tecnologias:hover {
-    background-size: 60px;
-  }
 }
 
 @media (max-width:1120px) {
@@ -277,5 +273,11 @@
     width: 240px;
     margin-top: 20px;
     font-size: 24px;
+  }
+}
+
+@media (max-width:400px) {
+  .escrita-habilidades {
+    font-size: 9vw;
   }
 }
