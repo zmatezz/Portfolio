@@ -14,10 +14,10 @@
 
   .letter-h {
     position: relative;
-    color: #FF3300;
-    text-shadow: 0px 0px 10px rgb(255, 0, 0),
-      0px 0px 20px rgb(255, 0, 0),
-      0px 0px 40px rgb(255, 0, 0);
+    color: $color-lred;
+    text-shadow: 0px 0px 10px $color-red,
+      0px 0px 20px $color-red,
+      0px 0px 40px $color-red;
   }
 
   $total-letras: 11;
@@ -58,7 +58,7 @@
     .tecnologias {
       width: 100px;
       height: 100px;
-      border: 1px solid #ff0000;
+      border: 1px solid $color-red;
       border-radius: 12px;
       display: flex;
       transition: ease 0.3s;
@@ -105,12 +105,12 @@
 }
 
 .tecnologias:hover {
-  background-color: rgb(0, 0, 0);
+  background-color: $color-black;
   transform: scale(1.2);
   background-size: 80px;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0px 0px 15px 2px #ff0000;
+  box-shadow: 0px 0px 15px 2px $color-red;
 }
 
 .html:hover {
@@ -145,10 +145,6 @@
   background-image: url(../img/git-h.png);
 }
 
-.container-tecnologias:hover+.div-texto+.div-texto2 {
-  display: block;
-}
-
 @media (max-width:1700px) {
 
   .quarto-container .div-texto {
@@ -166,7 +162,7 @@
   }
 
   .quarto-container .div-texto2 {
-    right: 100px;
+    right: 90px;
     width: 340px;
   }
 }
@@ -185,7 +181,6 @@
   }
 
   .quarto-container .div-texto2 {
-    right: 90px;
     width: 270px;
   }
 }

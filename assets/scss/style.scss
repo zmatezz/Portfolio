@@ -7,11 +7,12 @@
 }
 
 /*Components*/
+
+@import "./variaveis.scss";
 @import "./footer.scss";
 @import "./quarta-pagina.scss";
 @import "./terceira-pagina.scss";
 @import "./segunda-pagina.scss";
-@import "./variaveis.scss";
 @import "./header.scss";
 @import "./main.scss";
 
@@ -31,3 +32,5 @@ body {
 
   overflow-x: hidden;
 }
+
+$red: #FF3300;

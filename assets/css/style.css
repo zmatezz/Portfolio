@@ -163,8 +163,8 @@
 }
 .escrita-habilidades .letter-h {
   position: relative;
-  color: #FF3300;
-  text-shadow: 0px 0px 10px rgb(255, 0, 0), 0px 0px 20px rgb(255, 0, 0), 0px 0px 40px rgb(255, 0, 0);
+  color: #ff3300;
+  text-shadow: 0px 0px 10px #f42929, 0px 0px 20px #f42929, 0px 0px 40px #f42929;
 }
 .escrita-habilidades .letter-h:nth-child(1) {
   animation: fade 4s infinite 200ms;
@@ -227,7 +227,7 @@
 .quarto-container .container-tecnologias .tecnologias {
   width: 100px;
   height: 100px;
-  border: 1px solid #ff0000;
+  border: 1px solid #f42929;
   border-radius: 12px;
   display: flex;
   transition: ease 0.3s;
@@ -267,12 +267,12 @@
 }
 
 .tecnologias:hover {
-  background-color: rgb(0, 0, 0);
+  background-color: #000000;
   transform: scale(1.2);
   background-size: 80px;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0px 0px 15px 2px #ff0000;
+  box-shadow: 0px 0px 15px 2px #f42929;
 }
 
 .html:hover {
@@ -307,10 +307,6 @@
   background-image: url(../img/git-h.png);
 }
 
-.container-tecnologias:hover + .div-texto + .div-texto2 {
-  display: block;
-}
-
 @media (max-width: 1700px) {
   .quarto-container .div-texto {
     left: 180px;
@@ -324,7 +320,7 @@
     left: 130px;
   }
   .quarto-container .div-texto2 {
-    right: 100px;
+    right: 90px;
     width: 340px;
   }
 }
@@ -340,7 +336,6 @@
     left: 80px;
   }
   .quarto-container .div-texto2 {
-    right: 90px;
     width: 270px;
   }
 }
@@ -1196,6 +1191,15 @@ input {
     border-radius: 4px;
   }
 }
+@media (max-width: 400px) {
+  .close-menu-label::after {
+    right: 2.8rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    width: 2rem;
+    height: 2rem;
+  }
+}
 #primeira-pagina {
   width: 100vw;
   height: 100vh;
@@ -1420,7 +1424,7 @@ input {
     object-fit: fill;
   }
   .links-p1 {
-    top: 84%;
+    top: 82%;
   }
   .container-pp {
     display: flex;
@@ -1438,6 +1442,22 @@ input {
   }
   .container-pp .texto-escrevendo {
     font-size: 42px;
+  }
+}
+@media (max-width: 400px) {
+  .links-p1 a {
+    padding: 5px 20px;
+    margin: 10px;
+    font-size: 20px;
+  }
+  .container-pp {
+    top: 18%;
+  }
+  .container-pp .texto.ola {
+    font-size: 28px;
+  }
+  .container-pp .texto-escrevendo {
+    font-size: 36px;
   }
 }
 ::-webkit-scrollbar {
