@@ -1,22 +1,30 @@
-
 document.addEventListener('DOMContentLoaded', function () {
-  var typed = new Typed(".texto-escrevendo", {
-    strings: ["Matheus Guedes", "Dev Front End"],
+  const desktopVideo = document.querySelector('.video-background video');
+  const mobileVideo = document.querySelector('.video-background-mobile video');
 
-    backDelay: 1800,
-    typeSpeed: 90,
-    backSpeed: 80,
-    loop: true,
-    startDelay: 3500,
-    onComplete: function (self) {
-      self.startDelay = 0;
-    },
+  function activateScript() {
+    var typed = new Typed(".texto-escrevendo", {
+      strings: ["Matheus Guedes", "Dev Front End"],
+      backDelay: 1800,
+      typeSpeed: 90,
+      backSpeed: 80,
+      loop: true,
+      startDelay: 3500,
+      onComplete: function (self) {
+        self.startDelay = 0;
+      },
+    });
+
+    setTimeout(function () {
+      $('.ocultar').fadeIn();
+    }, 3500);
+  }
+
+  desktopVideo.addEventListener('loadedmetadata', function () {
+    activateScript();
+  });
+
+  mobileVideo.addEventListener('loadedmetadata', function () {
+    activateScript();
   });
 });
-
-
-setTimeout(function () {
-  $('.ocultar').fadeIn();
-}, 3500);
-
-
