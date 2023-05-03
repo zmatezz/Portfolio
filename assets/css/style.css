@@ -163,7 +163,7 @@
 }
 .escrita-habilidades .letter-h {
   position: relative;
-  color: rgb(255, 60, 0);
+  color: #FF3300;
   text-shadow: 0px 0px 10px rgb(255, 0, 0), 0px 0px 20px rgb(255, 0, 0), 0px 0px 40px rgb(255, 0, 0);
 }
 .escrita-habilidades .letter-h:nth-child(1) {
@@ -218,15 +218,13 @@
   margin: 0 auto;
   text-align: center;
 }
-
-.container-tecnologias {
+.quarto-container .container-tecnologias {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 40px;
 }
-
-.tecnologias {
+.quarto-container .container-tecnologias .tecnologias {
   width: 100px;
   height: 100px;
   border: 1px solid #ff0000;
@@ -235,11 +233,33 @@
   transition: ease 0.3s;
   background-position: center;
 }
-
-.tecnologias img {
+.quarto-container .container-tecnologias .tecnologias img {
   margin: auto;
   width: 80px;
   height: 80px;
+}
+.quarto-container .div-texto {
+  position: absolute;
+  font-family: "Montserrat", sans-serif;
+  font-size: 34px;
+  font-weight: 700;
+  left: 300px;
+  width: 210px;
+  text-align: center;
+  transition: opacity 0.9s ease-in-out;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 0px 10px red, 0px 0px 20px red, 0px 0px 40px red;
+}
+.quarto-container .div-texto2 {
+  position: absolute;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  transition: opacity 0.9s ease-in-out;
+  color: white;
+  width: 400px;
+  right: 180px;
 }
 
 .tecnologias:hover .icones-tecnologias {
@@ -287,121 +307,92 @@
   background-image: url(../img/git-h.png);
 }
 
-.div-texto {
-  position: absolute;
-  font-family: "Montserrat", sans-serif;
-  font-size: 34px;
-  font-weight: 700;
-  left: 300px;
-  width: 210px;
-  text-align: center;
-  transition: opacity 0.9s ease-in-out;
-  color: rgb(255, 255, 255);
-  text-shadow: 0px 0px 10px red, 0px 0px 20px red, 0px 0px 40px red;
-}
-
 .container-tecnologias:hover + .div-texto + .div-texto2 {
   display: block;
 }
 
-.div-texto2 {
-  position: absolute;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  text-align: center;
-  transition: opacity 0.9s ease-in-out;
-  color: white;
-  width: 400px;
-  right: 180px;
-}
-
 @media (max-width: 1700px) {
-  .div-texto {
+  .quarto-container .div-texto {
     left: 180px;
   }
-  .div-texto2 {
+  .quarto-container .div-texto2 {
     right: 90px;
   }
 }
 @media (max-width: 1600px) {
-  .div-texto {
+  .quarto-container .div-texto {
     left: 130px;
   }
-  .div-texto2 {
+  .quarto-container .div-texto2 {
     right: 100px;
     width: 340px;
   }
 }
 @media (max-width: 1500px) {
-  .div-texto2 {
+  .quarto-container .div-texto2 {
     width: 300px;
     font-weight: 700;
     font-size: 22px;
   }
 }
 @media (max-width: 1350px) {
-  .div-texto {
+  .quarto-container .div-texto {
     left: 80px;
   }
-  .div-texto2 {
+  .quarto-container .div-texto2 {
     right: 90px;
     width: 270px;
   }
 }
 @media (max-width: 1280px) {
-  .div-texto {
+  .quarto-container .div-texto {
     font-size: 28px;
     font-weight: 700;
     left: 120px;
   }
-  .div-texto2 {
+  .quarto-container .div-texto2 {
     right: 95px;
     width: 250px;
     font-size: 20px;
     font-weight: 700;
   }
-  .container-tecnologias {
+  .quarto-container .container-tecnologias {
     gap: 20px;
   }
   .tecnologias {
     width: 90px;
     height: 90px;
   }
-  .tecnologias img {
-    width: 60px;
-    height: 60px;
-  }
   .tecnologias:hover {
     background-size: 60px;
   }
 }
 @media (max-width: 1120px) {
-  .container-tecnologias {
+  .quarto-container .container-tecnologias {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
   }
   .tecnologias {
     touch-action: manipulation;
   }
-  .div-texto2 {
+  .quarto-container .div-texto2 {
     font-size: 22px;
   }
 }
 @media (max-width: 950px) {
-  .div-texto {
+  .quarto-container .div-texto {
     left: 70px;
   }
-  .div-texto2 {
+  .quarto-container .div-texto2 {
     width: 190px;
     font-size: 20px;
   }
 }
 @media (max-width: 800px) {
-  .div-texto {
+  .quarto-container .div-texto {
     left: 50px;
   }
-  .div-texto2 {
+  .quarto-container .div-texto2 {
     right: 50px;
   }
 }
@@ -412,19 +403,18 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    padding-top: 80px;
-    padding-bottom: 60px;
+    padding: 80px 0 30px;
   }
   .escrita-habilidades {
-    padding: 20px;
+    padding: 40px 0 20px;
     font-size: 8vw;
   }
-  .div-texto {
+  .quarto-container .div-texto {
     top: 3%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  .div-texto2 {
+  .quarto-container .div-texto2 {
     position: relative;
     right: 0;
     width: 240px;
