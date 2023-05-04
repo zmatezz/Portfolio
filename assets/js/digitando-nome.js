@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
       typeSpeed: 90,
       backSpeed: 80,
       loop: true,
-      startDelay: 3500,
+      startDelay: 3000,
       onComplete: function (self) {
         self.startDelay = 0;
       },
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setTimeout(function () {
       $('.ocultar').fadeIn();
-    }, 3500);
+    }, 3000);
   }
 
   desktopVideo.addEventListener('loadedmetadata', function () {
