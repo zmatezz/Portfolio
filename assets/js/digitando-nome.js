@@ -22,8 +22,4 @@ document.addEventListener('DOMContentLoaded', function () {
   desktopVideo.addEventListener('loadedmetadata', function () {
     activateScript();
   });
-
-  mobileVideo.addEventListener('loadedmetadata', function () {
-    activateScript();
-  });
 });
