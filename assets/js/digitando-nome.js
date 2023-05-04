@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const desktopVideo = document.querySelector('.video-background video');
-  const mobileVideo = document.querySelector('.video-background-mobile video');
+  const desktopVideo = document.querySelector('.video-background video', '.video-background-mobile video');
 
   function activateScript() {
     var typed = new Typed(".texto-escrevendo", {
