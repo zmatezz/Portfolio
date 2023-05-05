@@ -15,8 +15,23 @@ document.addEventListener('DOMContentLoaded', function () {
       },
     });
 
-    setTimeout(function () {
-      $('.ocultar').fadeIn();
-    }, 3500);
+
   });
+
+  window.onload = function () {
+    setTimeout(function () {
+      document.querySelector('.barra').classList.add('mostrar');
+    }, 3500);
+
+    setTimeout(function () {
+      document.querySelector('.box').classList.add('aparece');
+    }, 3500);
+  };
+
+  setTimeout(function () {
+    $('.ocultar').fadeIn();
+  }, 3500);
+
+
+
 });

@@ -882,6 +882,10 @@ input {
     text-align: left;
   }
 }
+header {
+  transition: opacity 1s ease-in-out;
+}
+
 .barra {
   width: 100%;
   background-color: rgba(41, 1, 1, 0.048);
@@ -894,6 +898,28 @@ input {
   font-family: "Montserrat", sans-serif;
 }
 
+/* padronizar*/
+#barra-menu {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  visibility: hidden;
+}
+
+#barra-menu.mostrar {
+  opacity: 1;
+  visibility: visible;
+}
+
+#transition {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+#transition.aparece {
+  opacity: 1;
+}
+
+/*padronizar*/
 .container-barra {
   flex-direction: row;
   padding: 4px;
