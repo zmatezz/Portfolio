@@ -1154,7 +1154,7 @@ input {
     border-radius: 4px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .close-menu-label::after {
     right: 1.8rem;
     font-size: 1.4rem;
@@ -1310,7 +1310,7 @@ input {
 }
 @media (max-width: 1170px) {
   .links-p1 {
-    margin-right: 90px;
+    margin-right: 80px;
   }
   .container-pp {
     margin-left: -110px;
@@ -1319,57 +1319,34 @@ input {
     font-size: 28px;
   }
 }
-@media (max-width: 950px) {
-  video {
-    transform: translateY(0px);
-  }
+@media (max-width: 850px) {
   .container-pp {
     position: absolute;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 700px;
+    padding-top: 20px;
     margin: 0 auto;
     left: 50%;
-    top: 12%;
+    top: 10%;
     transform: translate(-50%, -50%);
-    gap: 10px;
   }
   .container-pp .texto.ola {
-    font-size: 40px;
-    margin-left: 40px;
+    position: absolute;
+    font-size: 30px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .container-pp .texto-escrevendo {
-    font-size: 44px;
+    font-size: 34px;
   }
   .links-p1 {
     position: absolute;
     flex-direction: row;
     left: 50%;
-    top: 88%;
+    bottom: -2%;
     transform: translate(-50%, -50%);
   }
-  .links-p1 a {
-    padding: 16px 32px;
-    margin: 20px;
-    border-radius: 44px;
-    text-decoration: none;
-    font-size: 24px;
-  }
 }
-@media (max-width: 770px) {
-  .container-pp {
-    margin-left: 70px;
-  }
-  .container-pp .texto.ola {
-    font-size: 34px;
-    margin-left: 0px;
-  }
-  .container-pp .texto-escrevendo {
-    font-size: 38px;
-  }
-}
-@media (max-width: 620px) {
+@media (max-width: 420px) {
   #primeira-pagina .video-background {
     display: none;
   }
@@ -1387,40 +1364,16 @@ input {
     object-fit: fill;
   }
   .links-p1 {
-    top: 82%;
+    bottom: 4%;
   }
   .container-pp {
-    display: flex;
-    flex-direction: column;
-    margin-left: 0px;
     top: 20%;
-    height: 0 auto;
-    padding-top: 20px;
-  }
-  .container-pp .texto.ola {
-    position: absolute;
-    font-size: 36px;
-    margin-left: -100px;
-    transform: translateY(-28px);
-  }
-  .container-pp .texto-escrevendo {
-    font-size: 42px;
-  }
-}
-@media (max-width: 400px) {
-  .links-p1 a {
-    padding: 5px 20px;
-    margin: 10px;
-    font-size: 20px;
-  }
-  .container-pp {
-    top: 18%;
   }
   .container-pp .texto.ola {
     font-size: 28px;
   }
   .container-pp .texto-escrevendo {
-    font-size: 36px;
+    font-size: 30px;
   }
 }
 ::-webkit-scrollbar {
