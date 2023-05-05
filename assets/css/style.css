@@ -1366,6 +1366,9 @@ input {
   .links-p1 {
     bottom: 4%;
   }
+  .links-p1 a {
+    padding: 10px 20px;
+  }
   .container-pp {
     top: 20%;
   }

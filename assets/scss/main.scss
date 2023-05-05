@@ -167,8 +167,6 @@
 }
 
 @media (max-width: 1170px) {
-
-
   .links-p1 {
     margin-right: 80px;
   }
@@ -182,8 +180,6 @@
     font-size: 28px;
   }
 }
-
-
 
 @media (max-width: 850px) {
   .container-pp {
@@ -238,6 +234,10 @@
 
   .links-p1 {
     bottom: 4%;
+
+    a {
+      padding: 10px 20px;
+    }
   }
 
   .container-pp {
