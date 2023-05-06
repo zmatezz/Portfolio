@@ -901,8 +901,8 @@ header {
 /* padronizar*/
 #barra-menu {
   opacity: 0;
-  transition: opacity 1.5s ease-in-out;
   visibility: hidden;
+  transition: opacity 1.5s ease-in-out;
 }
 
 #barra-menu.mostrar {
@@ -1103,7 +1103,7 @@ header {
     display: block;
     position: fixed;
     top: -100vh;
-    transition: ease 0.3s;
+    transition: ease 0.8s !important;
   }
   .close-menu-label::after {
     content: "☰";
