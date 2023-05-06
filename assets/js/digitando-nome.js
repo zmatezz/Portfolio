@@ -26,4 +26,8 @@ window.onload = function () {
   setTimeout(function () {
     document.querySelector('.box').classList.add('aparece');
   }, 3000);
+
+  setTimeout(function () {
+    document.querySelector('.close-menu-label').classList.add('exibe');
+  }, 2200);
 };

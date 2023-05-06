@@ -910,6 +910,17 @@ header {
   visibility: visible;
 }
 
+#menu-mobile {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.5s ease-in-out;
+}
+
+#menu-mobile.exibe {
+  opacity: 1;
+  visibility: visible;
+}
+
 #transition {
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
