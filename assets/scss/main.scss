@@ -181,25 +181,30 @@
   }
 }
 
-@media (max-width: 850px) {
+
+
+@media only screen and (max-width: 991px) and (min-height: 640px) and (max-height: 1921px) {
   .container-pp {
     position: absolute;
-    padding-top: 20px;
+    padding-top: 60px;
     margin: 0 auto;
     left: 50%;
-    top: 10%;
+    top: 15%;
     transform: translate(-50%, -50%);
+    width: 700px;
+    height: 10vh;
 
     .texto.ola {
       position: absolute;
-      font-size: 30px;
+      font-size: 40px;
       top: 20%;
       left: 50%;
       transform: translate(-50%, -50%);
     }
 
     .texto-escrevendo {
-      font-size: 34px;
+      font-size: 56px;
+
     }
   }
 
@@ -207,8 +212,16 @@
     position: absolute;
     flex-direction: row;
     left: 50%;
-    bottom: -2%;
+    bottom: 5%;
     transform: translate(-50%, -50%);
+
+    a {
+      padding: 16px 36px;
+      margin: 10px;
+      border-radius: 62px;
+      text-decoration: none;
+      font-size: 34px;
+    }
   }
 }
 
@@ -233,7 +246,7 @@
   }
 
   .links-p1 {
-    bottom: 4%;
+    bottom: 14%;
 
     a {
       padding: 10px 20px;
@@ -244,11 +257,11 @@
     top: 20%;
 
     .texto.ola {
-      font-size: 28px;
+      font-size: 32px;
     }
 
     .texto-escrevendo {
-      font-size: 30px;
+      font-size: 38px;
     }
   }
 }
