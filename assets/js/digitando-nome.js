@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('load', function () {
   var meuVideo = document.getElementById('meu-video-desktop') || document.getElementById('meu-video-mobile');
 
   meuVideo.addEventListener('canplaythrough', function () {
