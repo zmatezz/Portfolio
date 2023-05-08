@@ -1,4 +1,4 @@
-window.addEventListener('load', function () {
+window.onload = function () {
   var meuVideo = document.getElementById('meu-video-desktop') || document.getElementById('meu-video-mobile');
 
   meuVideo.addEventListener('canplaythrough', function () {
@@ -8,7 +8,7 @@ window.addEventListener('load', function () {
       typeSpeed: 90,
       backSpeed: 80,
       loop: true,
-      startDelay: 3500,
+      startDelay: 3000,
       onComplete: function (self) {
         self.startDelay = 0;
       },
@@ -30,4 +30,4 @@ window.addEventListener('load', function () {
       document.querySelector('.close-menu-label').classList.add('exibe');
     }, 2200);
   });
-});
+};
