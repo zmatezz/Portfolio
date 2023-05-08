@@ -1,7 +1,7 @@
-window.onload = function () {
+window.addEventListener('DOMContentLoaded', function () {
   var meuVideo = document.getElementById('meu-video-desktop') || document.getElementById('meu-video-mobile');
 
-  meuVideo.addEventListener('loadeddata', function () {
+  meuVideo.addEventListener('canplaythrough', function () {
     var typed = new Typed(".texto-escrevendo", {
       strings: ["Matheus Guedes", "Dev Front End"],
       backDelay: 1800,
@@ -14,6 +14,9 @@ window.onload = function () {
       },
     });
   });
+});
+
+window.onload = function () {
 
   setTimeout(function () {
     $('.ocultar').fadeIn();
