@@ -14,6 +14,9 @@ window.addEventListener('DOMContentLoaded', function () {
       },
     });
   });
+});
+
+window.onload = function () {
 
   setTimeout(function () {
     $('.ocultar').fadeIn();
@@ -30,4 +33,4 @@ window.addEventListener('DOMContentLoaded', function () {
   setTimeout(function () {
     document.querySelector('.close-menu-label').classList.add('exibe');
   }, 2200);
-});
+};
