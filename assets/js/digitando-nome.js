@@ -2,7 +2,7 @@ window.addEventListener('load', function () {
   var meuVideo = document.getElementById('meu-video-desktop') || document.getElementById('meu-video-mobile');
 
   meuVideo.addEventListener('canplaythrough', function () {
-    var Typed = new Typed(".texto-escrevendo", {
+    var typed = new Typed(".texto-escrevendo", {
       strings: ["Matheus Guedes", "Dev Front End"],
       backDelay: 1800,
       typeSpeed: 90,
