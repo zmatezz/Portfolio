@@ -1,4 +1,4 @@
-window.addEventListener('load', function () {
+window.onload = function () {
   var meuVideo = document.getElementById('meu-video-desktop') || document.getElementById('meu-video-mobile');
 
   meuVideo.addEventListener('canplaythrough', function () {
@@ -30,4 +30,4 @@ window.addEventListener('load', function () {
   setTimeout(function () {
     document.querySelector('.close-menu-label').classList.add('exibe');
   }, 2200);
-});
+};

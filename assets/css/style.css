@@ -1469,7 +1469,7 @@ header {
     font-size: 34px;
   }
 }
-@media (max-width: 799px) {
+@media (max-width: 991px) {
   #primeira-pagina .video-background {
     display: none;
   }
