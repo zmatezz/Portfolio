@@ -1,4 +1,4 @@
-window.onload = function () {
+window.addEventListener('DOMContentLoaded', function () {
   var meuVideo = document.getElementById('meu-video-desktop') || document.getElementById('meu-video-mobile');
 
   meuVideo.addEventListener('canplaythrough', function () {
@@ -8,26 +8,29 @@ window.onload = function () {
       typeSpeed: 90,
       backSpeed: 80,
       loop: true,
-      startDelay: 3000,
+      startDelay: 3500,
       onComplete: function (self) {
         self.startDelay = 0;
       },
     });
-
-    setTimeout(function () {
-      $('.ocultar').fadeIn();
-    }, 3000);
-
-    setTimeout(function () {
-      document.querySelector('.barra').classList.add('mostrar');
-    }, 3000);
-
-    setTimeout(function () {
-      document.querySelector('.box').classList.add('aparece');
-    }, 3000);
-
-    setTimeout(function () {
-      document.querySelector('.close-menu-label').classList.add('exibe');
-    }, 2200);
   });
+});
+
+window.onload = function () {
+
+  setTimeout(function () {
+    $('.ocultar').fadeIn();
+  }, 3000);
+
+  setTimeout(function () {
+    document.querySelector('.barra').classList.add('mostrar');
+  }, 3000);
+
+  setTimeout(function () {
+    document.querySelector('.box').classList.add('aparece');
+  }, 3000);
+
+  setTimeout(function () {
+    document.querySelector('.close-menu-label').classList.add('exibe');
+  }, 2200);
 };
