@@ -1164,7 +1164,7 @@ input {
   font-family: "Poppins", sans-serif;
   overflow-y: hidden;
   overflow-x: hidden;
-  background-color: #090D11;
+  background-color: #0D1116;
 }
 #primeira-pagina .video-background {
   min-width: 100vw;
@@ -1184,7 +1184,6 @@ input {
   }
 }
 
-/*vídeo mobile*/
 #primeira-pagina .video-background-mobile {
   display: none;
 }
@@ -1311,113 +1310,22 @@ input {
     font-size: 28px;
   }
 }
-@media only screen and (max-width: 991px) and (min-height: 0px) and (max-height: 550px) {
-  .container-pp {
+@media (max-width: 991px) {
+  #primeira-pagina .video-background {
+    display: none;
+  }
+  #primeira-pagina .video-background-mobile {
+    display: block;
+    min-width: 100vw;
+    min-height: 100vh;
     position: absolute;
-    padding-top: 26px;
-    margin: 0 auto;
-    left: 50%;
-    top: 20%;
-    transform: translate(-50%, -50%);
-    width: 700px;
-    height: 20vh;
   }
-  .container-pp .texto.ola {
-    position: absolute;
-    font-size: 40px;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 30px;
-  }
-  .container-pp .texto-escrevendo {
-    font-size: 34px;
-  }
-  .links-p1 {
-    position: absolute;
-    flex-direction: row;
-    left: 50%;
-    bottom: 6%;
-    transform: translate(-50%, -50%);
-  }
-  .links-p1 a {
-    padding: 8px 18px;
-    margin: 10px;
-    border-radius: 32px;
-    text-decoration: none;
-    font-size: 20px;
-  }
-}
-@media only screen and (max-width: 991px) and (min-height: 551px) and (max-height: 880px) {
-  .container-pp {
-    position: absolute;
-    padding-top: 45px;
-    margin: 0 auto;
-    left: 50%;
-    top: 20%;
-    transform: translate(-50%, -50%);
-    width: 700px;
-    height: 20vh;
-  }
-  .container-pp .texto.ola {
-    position: absolute;
-    font-size: 40px;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .container-pp .texto-escrevendo {
-    font-size: 42px;
-  }
-  .links-p1 {
-    position: absolute;
-    flex-direction: row;
-    left: 50%;
-    bottom: 4%;
-    transform: translate(-50%, -50%);
-  }
-  .links-p1 a {
-    padding: 14px 24px;
-    margin: 10px;
-    border-radius: 32px;
-    text-decoration: none;
-    font-size: 24px;
-  }
-}
-@media only screen and (max-width: 991px) and (min-height: 881px) and (max-height: 1420px) {
-  .container-pp {
-    position: absolute;
-    padding-top: 60px;
-    margin: 0 auto;
-    left: 50%;
-    top: 22%;
-    transform: translate(-50%, -50%);
-    width: 700px;
-    height: 20vh;
-  }
-  .container-pp .texto.ola {
-    position: absolute;
-    font-size: 40px;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .container-pp .texto-escrevendo {
-    font-size: 46px;
-  }
-  .links-p1 {
-    position: absolute;
-    flex-direction: row;
-    left: 50%;
-    bottom: 11%;
-    transform: translate(-50%, -50%);
-  }
-  .links-p1 a {
-    padding: 10px 28px;
-    margin: 10px;
-    border-radius: 62px;
-    text-decoration: none;
-    font-size: 26px;
+  #primeira-pagina .video-background-mobile video {
+    width: 100%;
+    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill;
   }
 }
 @media only screen and (max-width: 991px) and (min-height: 1421px) and (max-height: 1921px) {
@@ -1456,22 +1364,113 @@ input {
     font-size: 34px;
   }
 }
-@media (max-width: 991px) {
-  #primeira-pagina .video-background {
-    display: none;
-  }
-  #primeira-pagina .video-background-mobile {
-    display: block;
-    min-width: 100vw;
-    min-height: 100vh;
+@media only screen and (max-width: 991px) and (min-height: 881px) and (max-height: 1420px) {
+  .container-pp {
     position: absolute;
+    padding-top: 60px;
+    margin: 0 auto;
+    left: 50%;
+    top: 22%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 20vh;
   }
-  #primeira-pagina .video-background-mobile video {
-    width: 100%;
-    height: 100%;
-    width: 100vw;
-    height: 100vh;
-    object-fit: fill;
+  .container-pp .texto.ola {
+    position: absolute;
+    font-size: 40px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .container-pp .texto-escrevendo {
+    font-size: 46px;
+  }
+  .links-p1 {
+    position: absolute;
+    flex-direction: row;
+    left: 50%;
+    bottom: 11%;
+    transform: translate(-50%, -50%);
+  }
+  .links-p1 a {
+    padding: 10px 28px;
+    margin: 10px;
+    border-radius: 62px;
+    text-decoration: none;
+    font-size: 26px;
+  }
+}
+@media only screen and (max-width: 991px) and (min-height: 551px) and (max-height: 880px) {
+  .container-pp {
+    position: absolute;
+    padding-top: 45px;
+    margin: 0 auto;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 20vh;
+  }
+  .container-pp .texto.ola {
+    position: absolute;
+    font-size: 40px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .container-pp .texto-escrevendo {
+    font-size: 42px;
+  }
+  .links-p1 {
+    position: absolute;
+    flex-direction: row;
+    left: 50%;
+    bottom: 4%;
+    transform: translate(-50%, -50%);
+  }
+  .links-p1 a {
+    padding: 14px 24px;
+    margin: 10px;
+    border-radius: 32px;
+    text-decoration: none;
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 991px) and (min-height: 0px) and (max-height: 550px) {
+  .container-pp {
+    position: absolute;
+    padding-top: 26px;
+    margin: 0 auto;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 20vh;
+  }
+  .container-pp .texto.ola {
+    position: absolute;
+    font-size: 40px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+  }
+  .container-pp .texto-escrevendo {
+    font-size: 34px;
+  }
+  .links-p1 {
+    position: absolute;
+    flex-direction: row;
+    left: 50%;
+    bottom: 6%;
+    transform: translate(-50%, -50%);
+  }
+  .links-p1 a {
+    padding: 8px 18px;
+    margin: 10px;
+    border-radius: 32px;
+    text-decoration: none;
+    font-size: 20px;
   }
 }
 ::-webkit-scrollbar {
