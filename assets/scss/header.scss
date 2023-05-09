@@ -1,7 +1,3 @@
-header {
-  transition: opacity 1s ease-in-out;
-}
-
 .barra {
   width: 100%;
   background-color: rgba(41, 1, 1, 0.048);
@@ -18,10 +14,8 @@ header {
 #barra-menu {
   opacity: 0;
   visibility: hidden;
-
   transition: opacity 1.5s ease-in-out;
 }
-
 
 #barra-menu.mostrar {
   opacity: 1;
@@ -192,88 +186,66 @@ header {
 }
 
 @media (max-width:991px) {
-
   .barra {
     height: 100vh;
-    display: flex;
+    top: -100vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    transition: ease 0.8s !important;
   }
 
   .container-barra {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
+    margin-top: 30px;
+    width: 100vw;
+    height: 100vh;
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 50px;
 
-
-  }
-
-  .menu {
-    right: -15px;
-  }
-
-
-
-  .barra .logo {
-    width: 100%;
-  }
-
-  .menu-mobile ul {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .menu-mobile ul a {
-    font-size: 35px;
-  }
-
-  .logo-esquerda img {
-    width: 70px;
-  }
-
-  .center-botao {
-    width: 232px;
-    height: 84px;
-  }
-
-  .btn {
-    width: 232px;
-    height: 84px;
-    background-color: black;
-
-    border: 8px solid $color-white;
-
-    svg {
-      width: 0px;
-      height: 0px;
+    .logo-esquerda img {
+      width: 60px;
     }
 
-    span {
-      font-size: 30px;
+    .menu {
+      margin-top: -13px;
+      right: -15px;
+
+      .menu-mobile ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin: 0 auto;
+      }
     }
 
+    .center-botao {
+      width: 242px;
+      height: 64px;
 
+      .btn {
+        width: 242px;
+        height: 64px;
+        border-radius: 16px;
+        background-color: rgba(0, 0, 0, 0.341);
+        margin: 0 auto;
+        border: 1px solid $color-wm;
+
+        svg {
+          width: 0px;
+          height: 0px;
+        }
+
+        span {
+          font-size: 30px;
+        }
+      }
+    }
   }
 
-
-
-
-  /* mobile */
   .barra {
-    display: block;
-    position: fixed;
     top: -100vh;
-    transition: ease 0.8s !important;
   }
 
   .close-menu-label::after {
@@ -292,16 +264,29 @@ header {
     text-align: center;
     border-radius: 8px;
     cursor: pointer;
+    transform: rotate(0deg);
+    /* rotação inicial */
+    transition: transform 0.3s ease;
+    /* transição suave */
+  }
+
+  /* fechar menu mobile */
+  .close-menu:checked~.close-menu-label::after {
+    display: block;
+    content: '✕';
+    transform: rotate(90deg);
+    /* rotação de 90 graus */
+  }
+
+  /* ícone do menu mobile quando fechado novamente */
+  .close-menu:not(:checked)~.close-menu-label::after {
+    transform: rotate(0deg);
+    /* rotação de volta */
   }
 
   /* fechar menu mobile */
   .close-menu:checked~.barra {
     top: 0;
-  }
-
-  .close-menu:checked~.close-menu-label::after {
-    display: block;
-    content: '✕';
   }
 
   .menu-mobile ul li a {
