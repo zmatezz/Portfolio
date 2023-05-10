@@ -1,14 +1,47 @@
-#segunda-pagina {
+#segunda-section {
   width: 100%;
   height: 0 auto;
   background: linear-gradient(90deg, rgb(7, 9, 15) 0%, rgba(0, 0, 0, 1) 50%, rgb(7, 9, 15) 100%);
-
-  overflow-x: hidden;
-
 }
 
 .segunda-tela {
-  padding: 20px 0px 0px 0px;
+  padding-top: 20px;
+
+  .escrita-sobre {
+    text-align: center;
+    font-size: 6vw;
+    font-family: Poiret One;
+    height: 100%;
+    overflow: hidden;
+
+    .letter {
+      position: relative;
+      color: rgb(255, 60, 0);
+      text-shadow: 0px 0px 10px rgb(255, 0, 0),
+        0px 0px 20px rgb(255, 0, 0),
+        0px 0px 40px rgb(255, 0, 0);
+    }
+
+    $total-letras: 9;
+
+    @for $cadaletra from 1 through $total-letras {
+      .letter:nth-child(#{$cadaletra}) {
+        animation: fade 4s infinite ($cadaletra * 200ms);
+      }
+    }
+
+    @-webkit-keyframes fade {
+      50% {
+        opacity: 0.02;
+      }
+    }
+
+    @keyframes fade {
+      50% {
+        opacity: 0.00;
+      }
+    }
+  }
 }
 
 .segundo-container {
@@ -22,33 +55,57 @@
   display: flex;
   flex-wrap: wrap;
 
-}
+  .foto-card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
 
+    img {
+      width: 100% transition all linear 0.7s;
+      transition-duration: 1.4s;
+      width: 40px;
+    }
 
-.sobre-mim {
-  display: flex;
-  flex-direction: column;
-  padding: 50px;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 200;
+    .foto-hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
 
-  p {
-    text-indent: 50px;
-    font-size: 20px;
-    max-width: 600px;
-    color: white;
+    .texto-card {
+      font-family: 'Source Sans Pro', sans-serif;
+      visibility: hidden;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin-top: -270px;
+      padding: 10px;
+      color: $color-white;
+      z-index: 1;
+      text-align: center;
+      font-size: 24px;
+    }
   }
-}
 
-/*card foto*/
-.foto-card {
-  position: relative;
-  width: 300px;
-  height: 400px;
-  overflow: hidden;
+  .sobre-mim {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+
+    p {
+      text-indent: 50px;
+      font-size: 24px;
+      max-width: 600px;
+      color: $color-white;
+    }
+  }
 }
 
 .foto-card span:first-of-type {
@@ -57,9 +114,8 @@
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(to right, transparent, #f42929);
+  background: linear-gradient(to right, transparent, $color-red);
   animation: animacao1 2s linear infinite;
-
 }
 
 @keyframes animacao1 {
@@ -78,10 +134,9 @@
   right: 0;
   width: 3px;
   height: 100%;
-  background: linear-gradient(to bottom, transparent, #f42929);
+  background: linear-gradient(to bottom, transparent, $color-red);
   animation: animacao2 2s linear infinite;
   animation-delay: 1s;
-
 }
 
 @keyframes animacao2 {
@@ -100,7 +155,7 @@
   right: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(to left, transparent, #f42929);
+  background: linear-gradient(to left, transparent, $color-red);
   animation: animacao3 2s linear infinite;
 }
 
@@ -120,10 +175,9 @@
   left: 0;
   width: 3px;
   height: 100%;
-  background: linear-gradient(to top, transparent, #f42929);
+  background: linear-gradient(to top, transparent, $color-red);
   animation: animacao4 2s linear infinite;
   animation-delay: 1s;
-
 }
 
 @keyframes animacao4 {
@@ -136,25 +190,6 @@
   }
 }
 
-/*hover img*/
-.foto-card {
-  position: relative;
-  overflow: hidden;
-
-  img {
-    width: 100% transition all linear 0.7s;
-    transition-duration: 1.4s;
-    width: 40px;
-  }
-
-  .foto-hover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-  }
-}
-
 .foto-card:hover img {
   opacity: 0;
 }
@@ -162,24 +197,7 @@
 .foto-card:hover img.foto-hover {
   opacity: 1;
   filter: blur(5px);
-
   transform: rotate(1deg);
-
-}
-
-.foto-card .texto-card {
-  font-family: 'Source Sans Pro', sans-serif;
-  visibility: hidden;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin-top: -270px;
-  padding: 10px;
-  color: white;
-  z-index: 1;
-  text-align: center;
-  font-size: 24px;
-
 }
 
 .foto-card:hover .texto-card {
@@ -188,128 +206,22 @@
   background: rgba(0, 0, 0, 0.163);
   transition-delay: 0.3s;
   cursor: pointer;
-  text-shadow: 0px 0px 3px black;
+  text-shadow: 0px 0px 3px $color-black;
 }
 
-.btn-curriculo {
-  padding: 10px;
-  border-radius: 22px;
-  font-size: 22px;
-  background: red;
-  color: white;
-}
-
-.btn-curriculo:hover {
-  padding: 10px;
-  border-radius: 22px;
-  font-size: 22px;
-  background-color: black;
-  color: red;
-}
-
-.escrita-sobre {
-  text-align: center;
-  font-size: 6vw;
-  font-family: Poiret One;
-  height: 100%;
-  overflow: hidden;
-}
-
-.letter {
-  position: relative;
-  color: rgb(255, 60, 0);
-  text-shadow: 0px 0px 10px rgb(255, 0, 0),
-    0px 0px 20px rgb(255, 0, 0),
-    0px 0px 40px rgb(255, 0, 0);
-}
-
-.letter {
-  &:nth-child(1) {
-    -webkit-animation: fade 4s infinite 200ms;
-    animation: fade 4s infinite 200ms;
+@media (max-width:750px) {
+  .segunda-tela .escrita-sobre {
+    font-size: 8vw;
   }
 
-  &:nth-child(2) {
-    -webkit-animation: fade 4s infinite 400ms;
-    animation: fade 4s infinite 400ms;
-  }
-
-  &:nth-child(3) {
-    -webkit-animation: fade 4s infinite 600ms;
-    animation: fade 4s infinite 600ms;
-  }
-
-  &:nth-child(4) {
-    -webkit-animation: fade 4s infinite 800ms;
-    animation: fade 4s infinite 800ms;
-  }
-
-  &:nth-child(5) {
-    -webkit-animation: fade 4s infinite 1000ms;
-    animation: fade 4s infinite 1000ms;
-  }
-
-  &:nth-child(6) {
-    -webkit-animation: fade 4s infinite 1200ms;
-    animation: fade 4s infinite 1200ms;
-  }
-
-  &:nth-child(7) {
-    -webkit-animation: fade 4s infinite 1400ms;
-    animation: fade 4s infinite 1400ms;
-  }
-
-  &:nth-child(8) {
-    -webkit-animation: fade 4s infinite 1400ms;
-    animation: fade 4s infinite 1600ms;
-  }
-
-  &:nth-child(9) {
-    -webkit-animation: fade 4s infinite 1400ms;
-    animation: fade 4s infinite 1800ms;
-  }
-}
-
-@-webkit-keyframes fade {
-  50% {
-    opacity: 0.02;
-  }
-}
-
-@keyframes fade {
-  50% {
-    opacity: 0.00;
-  }
-}
-
-
-@media (max-width:720px) {
-  .escrita-sobre {
-    font-size: 70px;
-  }
-
-  .sobre-mim p {
-    font-size: 18px;
+  .segunda-tela .segundo-container .sobre-mim p {
+    font-size: 22px;
     text-indent: 20px;
-
   }
 }
 
-@media (max-width:570px) {
-  .escrita-sobre {
-    font-size: 50px;
+@media (max-width:400px) {
+  .segunda-tela .escrita-sobre {
+    font-size: 9vw;
   }
-}
-
-@media (max-width:410px) {
-  .escrita-sobre {
-    font-size: 36px;
-  }
-
-  .sobre-mim {
-    text-align: left;
-  }
-
-
-
 }

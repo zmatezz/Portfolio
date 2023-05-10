@@ -1,4 +1,4 @@
-#primeira-pagina {
+#primeira-section {
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -30,7 +30,7 @@
   }
 }
 
-#primeira-pagina .video-background-mobile {
+#primeira-section .video-background-mobile {
   display: none;
 }
 
@@ -178,11 +178,11 @@
 }
 
 @media (max-width: 991px) {
-  #primeira-pagina .video-background {
+  #primeira-section .video-background {
     display: none;
   }
 
-  #primeira-pagina .video-background-mobile {
+  #primeira-section .video-background-mobile {
     display: block;
     min-width: 100vw;
     min-height: 100vh;

@@ -8,8 +8,114 @@
   top: 0;
   z-index: 1;
   font-family: 'Montserrat', sans-serif;
+
+  .container-barra {
+    flex-direction: row;
+    padding: 4px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+    flex-direction: row;
+
+    .logo-esquerda {
+      position: relative;
+      overflow: hidden;
+
+      img {
+        width: 100% transition all linear 0.7s;
+        transition-duration: 1.4s;
+        width: 40px;
+      }
+
+      .hover-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+      }
+    }
+
+    .logo-esquerda:hover img {
+      opacity: 0;
+    }
+
+    .logo-esquerda:hover img.hover-img {
+      opacity: 1;
+    }
+
+    .menu {
+      position: relative;
+      right: -60px;
+
+      nav {
+        width: 100%;
+      }
+
+      ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        width: 100%;
+      }
+
+      li a {
+        position: relative;
+        text-decoration: none;
+        color: $color-white;
+        margin: 0 30px 0 0;
+        font-size: 16px;
+        transition: ease-in-out 0.3s;
+        display: block;
+      }
+
+      a:hover {
+        color: $color-wm;
+      }
+
+      flex-direction: row;
+    }
+  }
 }
 
+.center-botao {
+  width: 126px;
+  height: 42px;
+  position: relative;
+
+  .btn {
+    top: 0px;
+    border-radius: 5px;
+    width: 126px;
+    height: 42px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid $color-white;
+    outline: none;
+    transition: 1s ease-in-out;
+
+    svg {
+
+      border-radius: 5px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      fill: none;
+      stroke: $color-red;
+      stroke-dasharray: 150 480;
+      stroke-dashoffset: 150;
+      transition: 1s ease-in-out;
+    }
+
+    span {
+      color: $color-white;
+      font-size: 18px;
+      font-weight: 100;
+    }
+  }
+}
+
+/* transição JS*/
 #barra-menu {
   opacity: 0;
   visibility: hidden;
@@ -24,7 +130,6 @@
 #menu-mobile {
   opacity: 0;
   visibility: hidden;
-
   transition: opacity 1.5s ease-in-out;
 }
 
@@ -42,77 +147,7 @@
   opacity: 1;
 }
 
-.container-barra {
-  flex-direction: row;
-  padding: 4px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-decoration: none;
-  flex-direction: row;
-
-  .logo-esquerda {
-    position: relative;
-    overflow: hidden;
-
-    img {
-      width: 100% transition all linear 0.7s;
-      transition-duration: 1.4s;
-      width: 40px;
-    }
-
-    .hover-img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-    }
-  }
-
-  .logo-esquerda:hover img {
-    opacity: 0;
-  }
-
-  .logo-esquerda:hover img.hover-img {
-    opacity: 1;
-  }
-}
-
-.menu {
-  position: relative;
-  right: -60px;
-
-  nav {
-    width: 100%;
-  }
-
-  ul {
-    display: flex;
-    list-style: none;
-    justify-content: space-around;
-    width: 100%;
-  }
-
-  li a {
-    position: relative;
-    text-decoration: none;
-    color: $color-white;
-    margin: 0 30px 0 0;
-    font-size: 16px;
-    transition: ease-in-out 0.3s;
-    display: block;
-  }
-
-  a:hover {
-    color: $color-wm;
-  }
-
-  flex-direction: row;
-}
-
-.menu-btn {
-  letter-spacing: 0;
-}
+/* End Transição JS*/
 
 .menu-btn:hover,
 .menu-btn:active {
@@ -132,44 +167,6 @@
 
 .menu-btn:hover::after {
   width: 100%;
-}
-
-.center-botao {
-  width: 126px;
-  height: 42px;
-  position: relative;
-}
-
-.btn {
-
-  top: 0px;
-  border-radius: 5px;
-  width: 126px;
-  height: 42px;
-  cursor: pointer;
-  background: transparent;
-  border: 1px solid $color-white;
-  outline: none;
-  transition: 1s ease-in-out;
-
-  svg {
-
-    border-radius: 5px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    fill: none;
-    stroke: $color-red;
-    stroke-dasharray: 150 480;
-    stroke-dashoffset: 150;
-    transition: 1s ease-in-out;
-  }
-
-  span {
-    color: $color-white;
-    font-size: 18px;
-    font-weight: 100;
-  }
 }
 
 .btn:hover {
