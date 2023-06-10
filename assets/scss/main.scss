@@ -373,7 +373,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 14%;
+  width: 10%;
   height: 5px;
   background-color: #ccc;
   z-index: 9999;
@@ -388,10 +388,15 @@
 
 body.loading {
   background-color: black;
-  overflow: hidden;
+  
 }
 
 /* Oculta o conteúdo inicialmente */
 .content {
   display: none;
+}
+
+@keyframes progressBarAnimation {
+  0% { width: 100%; }
+  100% { width: 0%; }
 }
