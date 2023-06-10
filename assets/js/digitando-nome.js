@@ -16,21 +16,52 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-window.onload = function () {
-
+window.addEventListener('load', function () {
   setTimeout(function () {
     $('.ocultar').fadeIn();
-  }, 3000);
+  }, 5000);
 
   setTimeout(function () {
     document.querySelector('.barra').classList.add('mostrar');
-  }, 3000);
+  }, 5000);
 
   setTimeout(function () {
     document.querySelector('.box').classList.add('aparece');
-  }, 3000);
+  }, 5000);
 
   setTimeout(function () {
     document.querySelector('.close-menu-label').classList.add('exibe');
-  }, 2200);
-};
+  }, 500);
+});
+
+// Função para mostrar o conteúdo e executar os scripts
+function showContent() {
+  // código para mostrar o conteúdo
+  var contentElements = document.querySelectorAll('.content');
+  contentElements.forEach(function(element) {
+    element.style.display = 'block';
+  });
+
+}
+
+// Exibe a barra de progresso
+var progressBar = document.querySelector('.progress-bar');
+var progressBarContainer = document.querySelector('.progress-bar-container');
+var body = document.querySelector('body');
+
+progressBar.style.width = '0%';
+
+var progress = 0;
+var intervalId = setInterval(function() {
+  progress += 1;
+  progressBar.style.width = progress + '%';
+
+  if (progress >= 100) {
+    clearInterval(intervalId);
+
+    progressBarContainer.style.display = 'none';
+    body.classList.remove('loading');
+
+    showContent();
+  }
+}, 20);
