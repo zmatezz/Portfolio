@@ -14,7 +14,7 @@
 <p align="center">
   <a href="#Tecnologias"> ⚙ Tecnologias</a>&nbsp;&nbsp;&nbsp;🔸&nbsp;&nbsp;&nbsp;
   <a href="#Como-utilizar">🛠 Como utilizar</a>&nbsp;&nbsp;&nbsp;🔸&nbsp;&nbsp;&nbsp;
-  <a href="#⚖-Licença">⚖ Licença</a>
+  <a href="#licenca">⚖ Licença</a>
 </p>
 
 <p align="center">
@@ -43,7 +43,7 @@ No navegador de sua preferência, digite o seguinte endereço:
 ```
 <div align="center">
 
-## ⚖ Licença
+## ⚖ Licença <a name="licenca"></a>
 
 🧠 Sinta-se livre para utilizar esses arquivos exclusivamente para fins de aprendizado.
 <br>
