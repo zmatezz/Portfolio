@@ -27,7 +27,7 @@
 
 ## ⚙ Tecnologias <a name="tecnologias"></a>
 - HTML
-- CSS (Compilado por SCSS)
+- CSS
 - Javascript
 
 ## 🛠 Como utilizar <a name="utilizar"></a>
