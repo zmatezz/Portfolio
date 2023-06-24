@@ -12,6 +12,54 @@
 
 </p>
 
+<p align="center">
+  <a href="#technologies">Tecnologias</a>&nbsp;&nbsp;&nbsp;🔸&nbsp;&nbsp;&nbsp;
+  <a href="#information_source-how-to-use">Como utilizar</a>&nbsp;&nbsp;&nbsp;🔸&nbsp;&nbsp;&nbsp;
+  <a href="#memo-license">Licença</a>
+</p>
+
+<p align="center">
+<a target="_blank" href="https://zmatezz.github.io/portfolio-zmatez/">Projeto no ar!</a>
+
+## Demonstração
+<h3>
+ Desktop
+  <br>
+  <br>
+  
+ ![desktop](https://github.com/zmatezz/portfolio-zmatez/assets/122845779/9e93074f-c440-4cec-8ab7-deaf25b5834b)
+</h3>
+
+<h3>
+ Mobile
+  <br>
+  <br>
+  
+ ![desktop](https://github.com/zmatezz/portfolio-zmatez/assets/122845779/9e93074f-c440-4cec-8ab7-deaf25b5834b)
+</h3>
+
+</p>
+
+## Tecnologias
+- HTML
+- CSS (Compilado por SCSS)
+- Javascript
+
+## Como utilizar
+```bash
+Clone esse repositório:
+`git clone https://github.com/zmatezz/portfolio-zmatez/`
+
+Usando terminal, inicie um servidor local:
+`npx http-server`
+
+No navegador de sua preferência, digite o seguinte endereço:
+`http://localhost:8080`
+
+```
+
+## Licença
+
 
 <p align="center">
   Feito com ❤ por Matheus Guedes
