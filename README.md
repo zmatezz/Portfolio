@@ -12,25 +12,25 @@
 </p>
 
 <p align="center">
-  <a href="#Tecnologias"> ⚙ Tecnologias</a>&nbsp;&nbsp;&nbsp;🔸&nbsp;&nbsp;&nbsp;
-  <a href="#Como-utilizar">🛠 Como utilizar</a>&nbsp;&nbsp;&nbsp;🔸&nbsp;&nbsp;&nbsp;
+  <a href="#tecnologias"> ⚙ Tecnologias</a>&nbsp;&nbsp;&nbsp;🔸&nbsp;&nbsp;&nbsp;
+  <a href="#utilizar">🛠 Como utilizar</a>&nbsp;&nbsp;&nbsp;🔸&nbsp;&nbsp;&nbsp;
   <a href="#licenca">⚖ Licença</a>
 </p>
 
-<p align="center">
-<a target="_blank" href="https://zmatezz.github.io/portfolio-zmatez/">Projeto no ar!</a>
+<h2 align="center">
+<a target="_blank" href="https://zmatezz.github.io/portfolio-zmatez/">🚀 Projeto no ar!</h2>
 
 ## 🎞 Demonstração
 | 💻 Desktop | 📱 Mobile |
 |---------|--------|
 | ![Desktop](https://github.com/zmatezz/portfolio-zmatez/assets/122845779/9e93074f-c440-4cec-8ab7-deaf25b5834b) | ![Mobile](https://github.com/zmatezz/portfolio-zmatez/assets/122845779/3fc6fa49-82dc-4073-b23f-00990b57d5e8) |
 
-## Tecnologias
+## ⚙ Tecnologias <a name="tecnologias"></a>
 - HTML
 - CSS (Compilado por SCSS)
 - Javascript
 
-## Como utilizar
+## 🛠 Como utilizar <a name="utilizar"></a>
 ```bash
 Clone esse repositório:
 `git clone https://github.com/zmatezz/portfolio-zmatez/`
