@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', function() {
         body.classList.remove('loading');
         showContent();
 
-        // Remover a classe "hide-overflow" após 5 segundos adicionais
+        // Remover a classe "hide-overflow" após 3 segundos adicionais
         setTimeout(function() {
           body.style.overflowY = 'visible';
         }, 3000);
