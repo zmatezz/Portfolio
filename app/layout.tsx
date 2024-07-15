@@ -1,18 +1,20 @@
-import { Inter, IBM_Plex_Mono } from 'next/font/google'
-import './globals.css'
-import { ReactNode } from 'react'
-import { Header } from './components/header'
+import { Inter, IBM_Plex_Mono } from "next/font/google";
+import "./globals.css";
+import { ReactNode } from "react";
+import { Header } from "./components/header";
+import { ContactForm } from "./components/contact-form";
+import { Footer } from "./components/footer";
 
 const inter = Inter({
-  variable: '--font-inter',
-  subsets: ['latin'],
-})
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
 
 const plexMono = IBM_Plex_Mono({
-  variable: '--font-plex-mono',
-  subsets: ['latin'],
-  weight: ['400', '500'],
-})
+  variable: "--font-plex-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
+});
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -20,7 +22,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body>
         <Header />
         {children}
+        <ContactForm />
+        <Footer />
       </body>
     </html>
-  )
+  );
 }
