@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/app/components/button";
 import { TechBadge } from "@/app/components/tech-badge";
 import Image from "next/image";
@@ -21,6 +23,14 @@ const MOCK_CONTACTS = [
 ]
 
 export const HeroSection = () => {
+    const handleContact = () => {
+        const contactSection = document.querySelector('#contact')
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' })
+        }
+    }
+
+
     return (
         <section className="w-full lg:h-[755px] bg-gradient-to-tl from-slate-700 via-gray-800 to-zinc-900 bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110px]">
             <div className="container flex items-start justify-between flex-col-reverse lg:flex-row">
@@ -31,7 +41,7 @@ export const HeroSection = () => {
                     <p className="text-gray-400 my-6 text-sm sm:text-base">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est sequi error tempora soluta? Voluptas non repellendus eligendi, ratione, odit unde aliquam impedit voluptatibus voluptatum quibusdam vero libero. Minus, blanditiis rem?</p>
 
                     <div className="flex flex-wrap gap-x-2 gap-y-3 lg:max-w-[340px]">{Array.from({ length: 7 }).map((_, index) => (<TechBadge name="Stack" key={index} />))}</div>
-                    <div className="flex sm:items-center mt-6 lg:mt-10 sm:gap-5 flex-col sm:flex-row"><Button className="w-max shadow-button">Entre em contato <HiArrowNarrowRight size={18} /></Button>
+                    <div className="flex sm:items-center mt-6 lg:mt-10 sm:gap-5 flex-col sm:flex-row"><Button className="w-max shadow-button" onClick={handleContact}>Entre em contato <HiArrowNarrowRight size={18} /></Button>
 
                         <div className="text-2xl text-gray-600 flex items-center h-20 gap-3">
                             {MOCK_CONTACTS.map((contact, index) => (
