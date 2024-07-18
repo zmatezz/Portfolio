@@ -42,7 +42,22 @@ const getPageData = async (): Promise<HomePageData> => {
           projectIcon
         }
       }
-     
+    workExperiences {
+        companyLogo {
+          url
+        }
+        role
+        companyName
+        companyUrl
+        startDate
+        endDate
+        description {
+          raw
+        }
+        technologies {
+          name
+        }
+      } 
     }
   `
 
@@ -50,7 +65,7 @@ const getPageData = async (): Promise<HomePageData> => {
 }
 
 export default async function Home() {
-  const { page: pageData } = await getPageData();
+  const { page: pageData, workExperiences } = await getPageData();
 
   console.log("esse é o pageData", pageData)
 
@@ -59,7 +74,7 @@ export default async function Home() {
       <HeroSection homeInfo={pageData} />
       <KnowTechs techs={pageData.knowTechs} />
       <HighlightedProjects projects={pageData.highlightProjects} />
-      <WorkExperience />
+      <WorkExperience experiences={workExperiences} />
     </>
   );
 }
