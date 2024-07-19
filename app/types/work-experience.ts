@@ -8,7 +8,7 @@ export type WorkExperience = {
   role: string;
   companyName: string;
   companyUrl: string;
-  StartDate: string;
+  startDate: string;
   endDate: string;
   technologies: KnowTech[];
   description: {
