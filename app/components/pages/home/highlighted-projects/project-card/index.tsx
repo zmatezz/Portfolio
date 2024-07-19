@@ -10,7 +10,7 @@ type ProjectCardProps = {
 }
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
-  console.log("svg do projeto", project.projectIcon)
+  /* console.log("svg do projeto", project.projectIcon) */
 
   return (
     <div className="flex gap-6 lg:gap-12 flex-col lg:flex-row">
@@ -20,7 +20,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
           height={304}
           src={project.thumbnail.url}
           alt={`Thumbnail do projeto ${project.title}`}
-          className="w-full h-200px sm:h-[300px] lg:w-[420px] lg:min-h-full object-cover rounded-lg"
+          className="w-full h-full object-cover rounded-lg"
         />
       </div>
 

@@ -67,7 +67,7 @@ const getPageData = async (): Promise<HomePageData> => {
 export default async function Home() {
   const { page: pageData, workExperiences } = await getPageData();
 
-  console.log("esse é o pageData", pageData);
+  /* console.log("esse é o pageData", pageData); */
 
   return (
     <>
