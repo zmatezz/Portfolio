@@ -7,6 +7,16 @@ import { Footer } from "./components/footer";
 import { BackToTop } from "./components/back-to-top";
 import NextTopLoader from 'nextjs-toploader';
 
+export const metadata = {
+  title: {
+    default: "Matheus Guedes | Portfolio <Desenvolvedor Web />",
+    template: "%s | Matheus Guedes"
+  },
+  icons: [{
+ url: '/favicon.svg'
+  }]
+}
+
 
 const inter = Inter({
   variable: "--font-inter",
@@ -23,8 +33,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR" className={`${inter.variable} ${plexMono.variable}`}>
       <body>
-        <NextTopLoader 
-        color="linear-gradient(to right, rgb(239, 68, 68), rgb(153, 27, 27))"
+        <NextTopLoader
+          color="linear-gradient(to right, rgb(239, 68, 68), rgb(153, 27, 27))"
         />
         <BackToTop />
         <Header />
