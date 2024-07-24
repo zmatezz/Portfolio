@@ -16,7 +16,12 @@ const getPageData = async (): Promise<HomePageData> => {
       name
       iconSvg
       startDate
-      customClass
+      textColor{
+        hex
+      }
+      backgroundColor{
+        hex
+      }
     }
     profilePicture {
       url
