@@ -6,6 +6,8 @@ import { SectionTitle } from "../section-title";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import axios from "axios";
+import { toast } from "react-hot-toast";
 
 const contactFormSchema = z.object({
   name: z.string().min(3).max(100),
@@ -16,16 +18,30 @@ const contactFormSchema = z.object({
 type ContactFormData = z.infer<typeof contactFormSchema>;
 
 export const ContactForm = () => {
-  const { handleSubmit, register } = useForm<ContactFormData>({
+  const {
+    handleSubmit,
+    register,
+    reset,
+    formState: { isSubmitting },
+  } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
   });
 
-  const onSubmit = (data: ContactFormData) => {
-    console.log(data);
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      await axios.post("/api/contact", data);
+      toast.success("Mensagem enviada com sucesso");
+      reset();
+    } catch {
+      toast.error("Ocorreu um erro ao enviar a mensagem. Tente novamente.");
+    }
   };
 
   return (
-    <section id="contact" className="py-16 px-6 md:py-32 flex items-center justify-center bg-gray-950">
+    <section
+      id="contact"
+      className="py-16 px-6 md:py-32 flex items-center justify-center bg-gray-950"
+    >
       <div className="w-full max-w-[420px] mx-auto">
         <SectionTitle
           subtitle="contato"
@@ -57,7 +73,10 @@ export const ContactForm = () => {
             {...register("message")}
           />
 
-          <Button className="mt-6 w-max mx-auto shadow-button">
+          <Button
+            className="mt-6 w-max mx-auto shadow-button"
+            disabled={isSubmitting}
+          >
             Enviar mensagem
             <HiArrowNarrowRight size={18} />
           </Button>
