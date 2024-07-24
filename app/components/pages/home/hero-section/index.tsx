@@ -7,6 +7,7 @@ import { TechBadge } from "@/app/components/tech-badge";
 import { HomePageInfo } from "@/app/types/page-info";
 import Image from "next/image";
 import { HiArrowNarrowRight } from "react-icons/hi"
+import { motion } from "framer-motion";
 
 type HeroSectionProps = {
     homeInfo: HomePageInfo
@@ -24,7 +25,13 @@ export const HeroSection = ({ homeInfo }: HeroSectionProps) => {
     return (
         <section className="w-full lg:h-[755px] bg-gradient-to-tl from-slate-700 via-gray-800 to-zinc-900 bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110px]">
             <div className="container flex items-start justify-between flex-col-reverse lg:flex-row">
-                <div className="w-full lg:max-w-[530px]">
+                <motion.div
+                    className="w-full lg:max-w-[530px]"
+                    initial={{ opacity: 0, x: -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -100 }}
+                    transition={{ duration: 0.5 }}
+                >
                     <p className="font-mono text-red-400">Olá, meu nome é</p>
                     <h2 className="text-4xl font-medium mt-2">Matheus Guedes</h2>
 
@@ -42,7 +49,7 @@ export const HeroSection = ({ homeInfo }: HeroSectionProps) => {
                                 </a>
                             ))}
                         </div></div>
-                </div>
+                </motion.div>
 
                 <Image width={420} height={404} className="w-[300px] h-[300px] lg:w-[420px] lg:h-[404px] mb-6 lg:mb-0 shadow-2xl rounded-lg object-cover" src={homeInfo.profilePicture.url} alt="Foto de perfil do Matheus Guedes" />
             </div>

@@ -7,6 +7,7 @@ import { Footer } from "./components/footer";
 import { BackToTop } from "./components/back-to-top";
 import NextTopLoader from "nextjs-toploader";
 import { Toaster } from "./components/toaster";
+import Loader from "./components/loader";
 
 export const metadata = {
   title: {
@@ -35,13 +36,15 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR" className={`${inter.variable} ${plexMono.variable}`}>
       <body>
-        <NextTopLoader color="linear-gradient(to right, rgb(239, 68, 68), rgb(153, 27, 27))" />
-        <Toaster />
-        <BackToTop />
-        <Header />
-        {children}
-        <ContactForm />
-        <Footer />
+        <Loader>
+          <NextTopLoader color="linear-gradient(to right, rgb(239, 68, 68), rgb(153, 27, 27))" />
+          <Toaster />
+          <BackToTop />
+          <Header />
+          {children}
+          <ContactForm />
+          <Footer />
+        </Loader>
       </body>
     </html>
   );
