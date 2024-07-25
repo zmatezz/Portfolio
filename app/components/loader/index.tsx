@@ -1,90 +1,24 @@
-// components/Loader.tsx
-"use client"
+"use client";
 
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-
-const AnimatedLogo: React.FC = () => {
-    return (
-        <motion.svg
-            width="200"
-            height="200"
-            viewBox="0 0 281 284"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="#ffffff"
-            initial={{ opacity: 0, scale: 0.7 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-                duration: 1.5,
-                ease: 'easeInOut',
-            }}
-        >
-            <motion.path
-                d="M239.57,408.53,112.51,285.79v244l34,37,.06-200,66.94,65ZM358.48,568.24l35-37v-75l-35,32Zm-203-73.45,103,75,135-127.15-33.09-12.49-85,12.2-26.11,23.74,90.25-11.3-79,76-54-39,154-140,0,66,33,13v-145Z"
-                transform="translate(-112.51 -285.79)"
-                stroke="#ffffff"
-                fill="none"
-                strokeWidth="3"
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{
-                    pathLength: { duration: 3.5, ease: 'easeInOut' },
-                }}
-            />
-            <motion.path
-                d="M239.57,408.53,112.51,285.79v244l34,37,.06-200,66.94,65ZM358.48,568.24l35-37v-75l-35,32Zm-203-73.45,103,75,135-127.15-33.09-12.49-85,12.2-26.11,23.74,90.25-11.3-79,76-54-39,154-140,0,66,33,13v-145Z"
-                transform="translate(-112.51 -285.79)"
-                stroke="none"
-                fill="#ffffff"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{
-                    duration: 1,
-                    ease: 'easeInOut',
-                    delay: 1.9,
-                }}
-            />
-        </motion.svg>
-    );
-};
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { AnimatedLogo } from "./animated-logo";
 
 const Loader: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    const [loading, setLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
+  const [showContent, setShowContent] = useState(false);
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setLoading(false);
-            sessionStorage.setItem('preloaderShown', 'true');
-        }, 4500);
+  const handleLoaderLoaded = () => {
+    setIsLoading(false);
+    setTimeout(() => setShowContent(true), 10050); // Ajuste conforme necessário
+  };
 
-        return () => clearTimeout(timer);
-    }, []);
-
-    useEffect(() => {
-        if (loading === false) {
-
-        }
-    }, [loading]);
-
-    return (
-        <>
-            {
-                loading ? (
-                    <motion.div
-                        className={`preloader bg-gray-900 fixed top-0 left-0 w-full h-full flex justify-center items-center z-50 ${loading ? 'not-sr-only' : 'sr-only'}`}
-                        initial={{ opacity: 1 }}
-                        animate={{ opacity: 0 }}
-                        transition={{ delay: 3.5, duration: 1 }}
-                    >
-                        <AnimatedLogo />
-                    </motion.div>
-                ) : (
-                    
-                    <>{children}</>
-                )
-            }
-        </>
-    );
+  return (
+    <div className="app">
+      {showContent && <>{children}</>}
+      <AnimatedLogo isLoading={isLoading} setIsLoading={handleLoaderLoaded} />
+    </div>
+  );
 };
 
 export default Loader;
