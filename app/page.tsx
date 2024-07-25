@@ -2,6 +2,7 @@ import { HeroSection } from "./components/pages/home/hero-section";
 import { HighlightedProjects } from "./components/pages/home/highlighted-projects";
 import { KnowTechs } from "./components/pages/home/known-techs";
 import { WorkExperience } from "./components/pages/home/work-experience";
+import StarsCanvas from "./components/star-background";
 import { HomePageData } from "./types/page-info";
 import { fetchHygraphQuery } from "./utils/fetch-hygraph-query";
 
@@ -77,6 +78,7 @@ export default async function Home() {
 
   return (
     <>
+      <StarsCanvas />
       <HeroSection homeInfo={pageData} />
       <KnowTechs techs={pageData.knowTechs} />
       <HighlightedProjects projects={pageData.highlightProjects} />

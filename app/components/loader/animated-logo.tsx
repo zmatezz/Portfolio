@@ -24,7 +24,7 @@ export const AnimatedLogo: React.FC<AnimatedLogoProps> = ({
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}
-          transition={{ delay: 3.5, duration: 1 }}
+          transition={{ delay: 2.2, duration: 1 }}
         >
           <motion.svg
             width="200"

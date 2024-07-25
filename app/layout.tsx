@@ -35,7 +35,7 @@ const plexMono = IBM_Plex_Mono({
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR" className={`${inter.variable} ${plexMono.variable}`}>
-      <body>
+      <body className="bg-gray-900">
         <Loader>
           <NextTopLoader color="linear-gradient(to right, rgb(239, 68, 68), rgb(153, 27, 27))" />
           <Toaster />

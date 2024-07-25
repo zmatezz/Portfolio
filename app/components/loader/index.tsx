@@ -10,7 +10,7 @@ const Loader: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   const handleLoaderLoaded = () => {
     setIsLoading(false);
-    setTimeout(() => setShowContent(true), 10050); // Ajuste conforme necessário
+    setTimeout(() => setShowContent(true), 3300); // Ajuste conforme necessário
   };
 
   return (
