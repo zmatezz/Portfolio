@@ -13,18 +13,18 @@ export const AnimatedLogo: React.FC<AnimatedLogoProps> = ({
   useEffect(() => {
     setTimeout(() => {
       setIsLoading();
-    }, 1900);
+    }, 1200);
   }, [setIsLoading]);
 
   return (
     <AnimatePresence>
       {isLoading && (
         <motion.div
-          className="preloader bg-gray-900 fixed top-0 left-0 w-full h-full flex justify-center items-center z-50"
+          className="preloader bg-gren-900 fixed top-0 left-0 w-full h-full flex justify-center items-center z-50"
           initial={{ opacity: 1 }}
           animate={{ opacity: 0 }}
           exit={{ opacity: 0 }}
-          transition={{ delay: 2.2, duration: 1 }}
+          transition={{ delay: 2.2, duration: 1, ease: "easeInOut" }}
         >
           <motion.svg
             width="200"

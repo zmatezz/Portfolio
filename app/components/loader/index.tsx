@@ -15,7 +15,7 @@ const Loader: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   return (
     <div className="app">
-      {showContent && <>{children}</>}
+      <AnimatePresence>{showContent && <>{children}</>}</AnimatePresence>
       <AnimatedLogo isLoading={isLoading} setIsLoading={handleLoaderLoaded} />
     </div>
   );
