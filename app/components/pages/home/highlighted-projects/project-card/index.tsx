@@ -3,6 +3,7 @@
 import { CMSIcon } from "@/app/components/cms-icon";
 import { Link } from "@/app/components/link";
 import { TechBadge } from "@/app/components/tech-badge";
+import { fadeUpAnimation } from "@/app/lib/animations";
 import { Project } from "@/app/types/projects";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -14,20 +15,6 @@ type ProjectCardProps = {
 
 export const ProjectCard = ({ project }: ProjectCardProps) => {
   /* console.log("svg do projeto", project.projectIcon) */
-  const animProps = {
-    initial: {
-      opacity: 0,
-      y: 50,
-    },
-    whileInView: {
-      opacity: 1,
-      y: 0,
-    },
-    exit: {
-      opacity: 0,
-      y: 50,
-    },
-  };
 
   return (
     <motion.div
@@ -56,7 +43,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
       <div className="flex-1 lg:py-[18px]">
         <motion.h3
           className="flex items-center gap-3 font-medium text-gray-50"
-          {...animProps}
+          {...fadeUpAnimation}
           transition={{ duration: 0.7 }}
         >
           <CMSIcon icon={project.projectIcon} />
@@ -64,7 +51,7 @@ export const ProjectCard = ({ project }: ProjectCardProps) => {
         </motion.h3>
         <motion.p
           className="text-gray-400 my-6"
-          {...animProps}
+          {...fadeUpAnimation}
           transition={{ duration: 0.2, delay: 0.3 }}
         >
           {project.shortDescription}

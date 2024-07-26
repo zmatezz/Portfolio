@@ -25,7 +25,10 @@ export type ProjectPageData = {
 }
 
 export type ProjectsPageData = {
-  projects: Project[]
+  projects: Project[];
+  projectsPage: {
+    projects: Project[]
+  }
 }
 
 export type ProjectsPageStaticData = {

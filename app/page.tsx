@@ -49,7 +49,7 @@ const getPageData = async (): Promise<HomePageData> => {
           projectIcon
         }
       }
-    workExperiences {
+    workExperiences(orderBy: startDate_DESC) {
         companyLogo {
           url
         }

@@ -2,7 +2,7 @@
 
 import { RichText } from "@/app/components/rich-text";
 import { TechBadge } from "@/app/components/tech-badge";
-import { techBadgeAnimation } from "@/app/lib/animations";
+import { fadeUpAnimation, techBadgeAnimation } from "@/app/lib/animations";
 import { WorkExperience } from "@/app/types/work-experience";
 import { differenceInMonths, differenceInYears, format } from "date-fns";
 import ptBR from "date-fns/locale/pt-BR";
@@ -31,8 +31,8 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
   });
   const formattedEndDate = endDate
     ? format(new Date(endDate), "MMM yyyy", {
-        locale: ptBR,
-      })
+      locale: ptBR,
+    })
     : "o momento";
 
   const end = endDate ? new Date(endDate) : new Date();
@@ -43,20 +43,16 @@ export const ExperienceItem = ({ experience }: ExperienceItemProps) => {
 
   const formattedDuration =
     years > 0
-      ? `${years} ano${years > 1 ? "s" : ""}${
-          monthsRemaining > 0
-            ? ` e ${monthsRemaining} mes${monthsRemaining > 1 ? "es" : ""}`
-            : ""
-        }`
+      ? `${years} ano${years > 1 ? "s" : ""}${monthsRemaining > 0
+        ? ` e ${monthsRemaining} mes${monthsRemaining > 1 ? "es" : ""}`
+        : ""
+      }`
       : `${months} mes${months > 1 ? "es" : ""}`;
 
   return (
     <motion.div
       className="grid grid-cols-[40px,1fr] gap-4 md:gap-10"
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 50 }}
-      transition={{ duration: 0.5 }}
+      {...fadeUpAnimation}
     >
       <div className="flex flex-col items-center gap-4">
         <div className="rounded-full border border-gray-500 p-0.5">
