@@ -23,14 +23,16 @@ export const HeroSection = ({ homeInfo }: HeroSectionProps) => {
   };
 
   const typewriterOptions = {
-    strings: ["Matheus Guedes", "Desenvolvedor", "UX/UI Designer"],
+    strings: ["Desenvolvedor", "Designer UX/UI", "Freelancer"],
     autoStart: true,
     loop: true,
+    delay: 50,
+    pauseFor: 4000
   }
 
   return (
-    <section className="w-full lg:h-[755px]  bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 sm:pb-32 py-32 lg:pb-[110px]">
-      <div className="container flex items-start justify-between flex-col-reverse lg:flex-row">
+    <section className="w-full lg:min-h-screen max-h-[1080px] bg-cover bg-center bg-no-repeat flex flex-col justify-center pb-10 sm:pb-32 py-32 lg:pb-[110px]">
+      <div className="container flex items-center justify-between flex-col-reverse lg:flex-row">
         <motion.div
           className="w-full lg:max-w-[530px]"
           initial={{ opacity: 0, x: -100 }}
@@ -39,8 +41,8 @@ export const HeroSection = ({ homeInfo }: HeroSectionProps) => {
           transition={{ duration: 0.6, ease: "easeInOut" }}
         >
 
-          <p className="font-mono text-red-400">Olá, eu sou</p>
-          <h2 className="text-4xl font-medium mt-2">
+          <p className="font-poppins text-[#DEDEDE] text-lg relative top-4 left-1">saudações, eu sou <span className="font-bold">Matheus <span className="bg-gradient-to-r from-[#DEDEDE] via-[#6BBAFF] to-[#4271EB] inline-block text-transparent bg-clip-text">.</span></span></p>
+          <h2 className="text-6xl leading-normal font-bold bg-gradient-to-r from-[#DEDEDE] via-[#6BBAFF] to-[#4271EB] inline-block text-transparent bg-clip-text">
             <Typewriter
               options={typewriterOptions}
             />
@@ -96,24 +98,24 @@ export const HeroSection = ({ homeInfo }: HeroSectionProps) => {
           <Image
             width={400}
             height={400}
-            className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] mb-6 lg:mb-0 rounded-full object-cover  z-20"
+            className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] mb-6 lg:mb-0 rounded-full object-cover z-20"
             src={homeInfo.profilePicture.url}
             alt="Foto de perfil do Matheus Guedes"
           />
 
-          <motion.svg className="w-[300px] h-[300px] lg:w-[400px] lg:h-[380px] absolute -bottom-[3px] z-10" fill={"transparent"} viewBox={"0 0 400 400"} xmlns={"http://www.w3.org/2000/svg"}>
-            <motion.circle cx={200} cy={200} r={200} stroke="#dc2626" strokeWidth={4} initial={{ strokeDasharray: "24 10 0 0" }} animate={{ strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"], rotate: [120, 360] }} transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}>
+          <motion.svg className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] absolute  z-10" fill={"transparent"} viewBox={"0 0 400 400"} xmlns={"http://www.w3.org/2000/svg"}>
+            <motion.circle cx={200} cy={200} r={200} stroke="#4271EB" strokeWidth={4} initial={{ strokeDasharray: "24 10 0 0" }} animate={{ strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"], rotate: [120, 360] }} transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}>
 
             </motion.circle>
           </motion.svg>
 
-          <svg className="fill-[#111827]/60 w-[300px] h-[300px] lg:w-[400px] lg:h-[380px] absolute -bottom-[3px] z-10" viewBox={"0 0 400 400"} xmlns={"http://www.w3.org/2000/svg"}>
+          {/* <svg className="fill-[#111827] w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] absolute  z-10" viewBox={"0 0 400 400"} xmlns={"http://www.w3.org/2000/svg"}>
             <circle cx={200} cy={200} r={200}>
 
             </circle>
           </svg>
 
-          <svg className="fill-[#111827]/60 w-[300px] h-[300px] lg:w-[400px] lg:h-[380px] absolute -bottom-[3px] z-10" width="711" height="668" viewBox="0 0 711 668" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg className="fill-[#111827] w-[300px] h-[300px] lg:w-[400px] lg:h-[380px] absolute  z-10" width="711" height="668" viewBox="0 0 711 668" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g opacity="0.4" filter="url(#filter0_f_10_492)">
               <path d="M536.043 256.404C536.043 256.404 472.799 302.978 383.857 368.477C294.916 433.976 212.489 491.577 213.957 493.596C148.458 404.655 167.462 279.456 256.404 213.957C345.346 148.458 470.544 167.462 536.043 256.404Z" fill="#43D9AD" />
             </g>
@@ -126,7 +128,7 @@ export const HeroSection = ({ homeInfo }: HeroSectionProps) => {
             </defs>
           </svg>
 
-          <svg  className="fill-[#111827]/60 w-[300px] h-[300px] lg:w-[400px] lg:h-[380px] absolute -bottom-[3px] z-10" width="711" height="668" viewBox="0 0 711 668" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg  className="fill-[#111827] w-[300px] h-[300px] lg:w-[400px] lg:h-[380px] absolute -bottom-[3px] z-10" width="711" height="668" viewBox="0 0 711 668" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g opacity="0.4" filter="url(#filter0_f_10_491)">
               <path d="M174.957 411.596C174.957 411.596 238.201 365.022 327.143 299.523C416.084 234.024 498.511 176.423 497.043 174.404C562.542 263.345 543.538 388.544 454.596 454.043C365.655 519.542 240.456 500.538 174.957 411.596Z" fill="#4D5BCE" />
             </g>
@@ -137,7 +139,7 @@ export const HeroSection = ({ homeInfo }: HeroSectionProps) => {
                 <feGaussianBlur stdDeviation="87" result="effect1_foregroundBlur_10_491" />
               </filter>
             </defs>
-          </svg>
+          </svg> */}
 
 
         </motion.div>

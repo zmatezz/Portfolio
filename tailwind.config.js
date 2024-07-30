@@ -23,17 +23,15 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      sans: ["var(--font-inter)", "sans-serif"],
+      sans: ["var(--font-fira-sans)", "sans-serif"],
+      poppins: ["var(--font-poppins)", "monospace"],
     },
     extend: {
       backgroundImage: {
         "hero-image": "url('/images/hero-bg.png')",
       },
-      fontFamily: {
-        mono: ["var(--font-plex-mono)", "monospace"],
-      },
       boxShadow: {
-        button: "0px 0px 68px 7px rgb(244 67 54)",
+        button: "0px 0px 68px 7px rgb(33 150 243);",
       },
     },
   },

@@ -1,4 +1,4 @@
-import { Inter, IBM_Plex_Mono } from "next/font/google";
+import { Fira_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 import { ReactNode } from "react";
 import { Header } from "./components/header";
@@ -21,23 +21,24 @@ export const metadata = {
   ],
 };
 
-const inter = Inter({
-  variable: "--font-inter",
+const fira_sans = Fira_Sans({
+  variable: "--font-fira-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-const plexMono = IBM_Plex_Mono({
-  variable: "--font-plex-mono",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${plexMono.variable}`}>
+    <html lang="pt-BR" className={`${fira_sans.variable} ${poppins.variable}`}>
       <body className="bg-gray-900">
         <Loader>
-          <NextTopLoader color="linear-gradient(to right, rgb(239, 68, 68), rgb(153, 27, 27))" />
+          <NextTopLoader color="linear-gradient(to right, rgb(107,186,255), rgb(66,113,235))" />
           <Toaster />
           <BackToTop />
           <Header />
