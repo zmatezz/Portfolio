@@ -48,5 +48,5 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </Loader>
       </body>
     </html>
-  );
+  )
 }

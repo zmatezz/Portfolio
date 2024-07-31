@@ -93,53 +93,61 @@ export const HeroSection = ({ homeInfo }: HeroSectionProps) => {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 200, scale: 0.5 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="origin-center relative flex justify-center items-center h-[400px] overflow-hidden rounded-full"
+          className="origin-center relative flex justify-center items-center h-[400px] max-w-[480px] rounded-full"
         >
-          <Image
-            width={400}
-            height={400}
-            className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] mb-6 lg:mb-0 rounded-full object-cover z-20"
-            src={homeInfo.profilePicture.url}
-            alt="Foto de perfil do Matheus Guedes"
-          />
+          <div className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] relative flex overflow-hidden rounded-full">
+            <Image
+              width={400}
+              height={400}
+              className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] mb-6 lg:mb-0 rounded-full object-cover z-20"
+              src={homeInfo.profilePicture.url}
+              alt="Foto de perfil do Matheus Guedes"
+            />
 
-          <motion.svg className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] absolute  z-10" fill={"transparent"} viewBox={"0 0 400 400"} xmlns={"http://www.w3.org/2000/svg"}>
-            <motion.circle cx={200} cy={200} r={200} stroke="#4271EB" strokeWidth={4} initial={{ strokeDasharray: "24 10 0 0" }} animate={{ strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"], rotate: [120, 360] }} transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}>
+            <motion.svg className="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] absolute z-10" fill={"transparent"} viewBox={"0 0 400 400"} xmlns={"http://www.w3.org/2000/svg"}>
+              <motion.circle cx={200} cy={200} r={200} stroke="#4271EB" strokeWidth={4} initial={{ strokeDasharray: "24 10 0 0" }} animate={{ strokeDasharray: ["15 120 25 25", "16 25 92 72", "4 250 22 22"], rotate: [120, 360] }} transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}>
 
-            </motion.circle>
-          </motion.svg>
+              </motion.circle>
+            </motion.svg>
+          </div>
 
-          {/* <svg className="fill-[#111827] w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] absolute  z-10" viewBox={"0 0 400 400"} xmlns={"http://www.w3.org/2000/svg"}>
+
+
+          <svg className="fill-[#000000]/10 w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] absolute  " viewBox={"0 0 400 400"} xmlns={"http://www.w3.org/2000/svg"}>
             <circle cx={200} cy={200} r={200}>
 
             </circle>
           </svg>
 
-          <svg className="fill-[#111827] w-[300px] h-[300px] lg:w-[400px] lg:h-[380px] absolute  z-10" width="711" height="668" viewBox="0 0 711 668" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g opacity="0.4" filter="url(#filter0_f_10_492)">
-              <path d="M536.043 256.404C536.043 256.404 472.799 302.978 383.857 368.477C294.916 433.976 212.489 491.577 213.957 493.596C148.458 404.655 167.462 279.456 256.404 213.957C345.346 148.458 470.544 167.462 536.043 256.404Z" fill="#43D9AD" />
+
+
+          <svg className="absolute -z-10" width="711" height="668" viewBox="0 0 711 668" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.4" filter="url(#filter0_f_18_130)">
+              <path d="M536.043 256.404C536.043 256.404 472.799 302.978 383.857 368.477C294.916 433.976 212.489 491.577 213.957 493.596C148.458 404.655 167.462 279.456 256.404 213.957C345.346 148.458 470.544 167.462 536.043 256.404Z" fill="#C7C7C7" />
             </g>
             <defs>
-              <filter id="filter0_f_10_492" x="0.987061" y="0.986855" width="709.056" height="666.609" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <filter id="filter0_f_18_130" x="0.987061" y="0.986855" width="709.056" height="666.609" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                 <feFlood flood-opacity="0" result="BackgroundImageFix" />
                 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                <feGaussianBlur stdDeviation="87" result="effect1_foregroundBlur_10_492" />
+                <feGaussianBlur stdDeviation="87" result="effect1_foregroundBlur_18_130" />
               </filter>
             </defs>
           </svg>
 
-          <svg  className="fill-[#111827] w-[300px] h-[300px] lg:w-[400px] lg:h-[380px] absolute -bottom-[3px] z-10" width="711" height="668" viewBox="0 0 711 668" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g opacity="0.4" filter="url(#filter0_f_10_491)">
-              <path d="M174.957 411.596C174.957 411.596 238.201 365.022 327.143 299.523C416.084 234.024 498.511 176.423 497.043 174.404C562.542 263.345 543.538 388.544 454.596 454.043C365.655 519.542 240.456 500.538 174.957 411.596Z" fill="#4D5BCE" />
+
+          <svg className="absolute -z-10" width="572" height="568" viewBox="0 0 672 668" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.4" filter="url(#filter0_f_18_129)">
+              <path d="M174.957 411.596C174.957 411.596 238.201 365.022 327.143 299.523C416.084 234.024 498.511 176.423 497.043 174.404C562.542 263.345 543.538 388.544 454.596 454.043C365.655 519.542 240.456 500.538 174.957 411.596Z" fill="#4271EB" />
             </g>
             <defs>
-              <filter id="filter0_f_10_491" x="0.956787" y="0.403721" width="709.056" height="666.609" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <filter id="filter0_f_18_129" x="0.956787" y="0.403721" width="709.056" height="666.609" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                 <feFlood flood-opacity="0" result="BackgroundImageFix" />
                 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                <feGaussianBlur stdDeviation="87" result="effect1_foregroundBlur_10_491" />
+                <feGaussianBlur stdDeviation="87" result="effect1_foregroundBlur_18_129" />
               </filter>
             </defs>
-          </svg> */}
+          </svg>
+
 
 
         </motion.div>

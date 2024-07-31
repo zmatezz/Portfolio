@@ -27,7 +27,7 @@ export const KnowTechs = ({ initialTechs }: KnowTechProps) => {
 
   return (
     <section className="container py-16">
-      <SectionTitle subtitle="skills" title="Conhecimentos" />
+      <SectionTitle subtitle="conhecimentos" title="Conhecimentos" />
       <SortableList
         className="grid grid-cols-[repeat(auto-fit,minmax(264px,1fr))] gap-3 mt-[60px]"
         draggedItemClassName="dragged-item"
