@@ -15,10 +15,10 @@ export const WorkExperience = ({ experiences }: WorkExperienceProps) => {
           title="Experiência Profissional"
         />
         <p className="text-gray-400 mt-6">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro modi
-          hic praesentium eaque distinctio deserunt placeat soluta veniam nemo
-          omnis culpa autem neque sapiente voluptatem cupiditate saepe,
-          aspernatur eum. Placeat!
+          Veja minha trajetória na área e, se despertar seu interesse, estou disponível para freelances. Vamos criar soluções brilhantes para sua empresa?
+          <span className="inline-block mt-2">
+            Caso queira ver outras experiências profissionais em detalhes, baixe meu CV abaixo.
+          </span>
         </p>
       </div>
 

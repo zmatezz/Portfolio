@@ -12,18 +12,17 @@ type HighlightedProjectsProps = {
 export const HighlightedProjects = ({ projects }: HighlightedProjectsProps) => {
   return (
     <section className="container py-16">
-      <SectionTitle subtitle="destaques" title="Projetos em destaque" />
-      <HorizontalDivider className="mb-16" />
+      <SectionTitle subtitle="destaques" title="Projetos em destaque" className="mb-16" />
 
       <div>
-        {projects?.map(project => (
+        {projects?.map((project, i) => (
           <div key={project.slug}>
-            <ProjectCard project={project}/>
-            <HorizontalDivider className="my-16" />
+            <ProjectCard project={project} className={i === projects.length - 1 ? 'my-16' : ''} />
+            {i !== projects.length - 1 && <HorizontalDivider className="my-16" />}
           </div>
         ))}
 
-       
+
 
         <p className="flex items-center gap-1.5">
           <span className="text-gray-400">Se interessou?</span>

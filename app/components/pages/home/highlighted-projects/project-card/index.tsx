@@ -4,6 +4,7 @@ import { CMSIcon } from "@/app/components/cms-icon";
 import { Link } from "@/app/components/link";
 import { TechBadge } from "@/app/components/tech-badge";
 import { fadeUpAnimation } from "@/app/lib/animations";
+import { cn } from "@/app/lib/utils";
 import { Project } from "@/app/types/projects";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -11,14 +12,15 @@ import { HiArrowNarrowRight } from "react-icons/hi";
 
 type ProjectCardProps = {
   project: Project;
+  className?: string;
 };
 
-export const ProjectCard = ({ project }: ProjectCardProps) => {
+export const ProjectCard = ({ project, className }: ProjectCardProps) => {
   /* console.log("svg do projeto", project.projectIcon) */
 
   return (
     <motion.div
-      className="flex gap-6 lg:gap-12 flex-col lg:flex-row"
+      className={cn("flex gap-6 lg:gap-12 flex-col lg:flex-row", className)}
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 100 }}
