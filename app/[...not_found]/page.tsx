@@ -1,3 +1,5 @@
+"use client"
+
 import Link from 'next/link'
 import { Button } from './../components/button'
 import { HiArrowNarrowLeft } from 'react-icons/hi'
