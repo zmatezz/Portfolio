@@ -10,14 +10,6 @@ type ProjectProps = {
   }
 }
 
-export const metadata = {
-  title: "Projeto - Zmatezz",
-  icon: [{
-    url: "/favicon.svg"
-  }]
-
-}
-
 const getProjectDetails = async (slug: string): Promise<ProjectPageData> => {
   const query = `
     query ProjectQuery {
@@ -66,22 +58,6 @@ export default async function Project({ params: { slug } }: ProjectProps) {
   )
 }
 
-/* export async function generateStaticParams() {
-
-
-  const query = `
-    query ProjectsSlugsQuery(){
-      projects(first: 100){
-        slug
-      }
-    }
-    `
-
-  const { projects } = await fetchHygraphQuery<ProjectsPageStaticData>(query)
-
-  return projects
-
-} */
 
 export async function generateStaticParams() {
   const query = `
